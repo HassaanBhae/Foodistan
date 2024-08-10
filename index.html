@@ -5,12 +5,81 @@
     <meta name="viewport" content=""width-device-width, initial-scale="1.0">
     <title>Homepage</title>
 </head>
+<style>
+    body {
+        background-image: url("./images/bg.jpg");
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+    }
+
+    @font-face {
+        font-family: "Orpheus-italic";
+        src: url("./fonts/orpheuspro-italic.otf");
+    }
+    .recipe-text{
+        font-size: 20px;
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        background-color: rgb(240, 240, 64);
+
+    }
+    .recipe-text:hover{
+        color:green;
+        background-color: rgb(152, 152, 83);
+
+    }
+    #mainhead{
+        text-align: center;
+        color: green;
+        background: linear-gradient(to top, #b27e3a 0%, #eacda3 100%);
+        font-size: 60px;
+        font-family:"Orpheus-italic";
+        border-radius: 20px;
+    }
+    div.span{
+        display: block;
+
+    }
+    span.caption{
+        /* background-color: rgb(240, 240, 64); */
+        border-radius: 5px;
+        display:inline-block;
+        border-style:solid;  
+        border-color: green;  
+        font-size: 20px;   
+    }
+    div.pic{
+        display: inline-block;
+        vertical-align:top;
+        margin: 30px;
+        text-align:center;
+
+
+    }
+    img{
+        height: 280px;
+        width: 430px;
+        border-radius: 30px;
+
+    }
+
+</style>
 <body>
-    <h1>Recipes</h1>
-    <ul>
-        <li> <a href="./recipes/lasagna.html">Lasagna</a></li>
-        <li> <a href="./recipes/biryani.html">Biryani</a></li>
-        <li> <a href="./recipes/pizza.html">Pizza</a></li>
-    </ul>
+    <h1 id="mainhead">Recipes</h1>
+    <div class="pic">
+        <img src="./images/lasagna.jpeg">
+        <div><span class="caption"><a href="./recipes/lasagna.html" class="recipe-text">Lasagna</a></span></div>
+    </div>
+    <div class="pic">
+        <img src="./images/biryani.jpeg">
+        <div><span class="caption"><a href="./recipes/biryani.html" class="recipe-text">Biryani</a></span></div>
+    </div>
+    <div class="pic">
+        <img src="./images/pizza.jpeg">
+        <div><span class="caption"><a href="./recipes/pizza.html"   class="recipe-text">Pizza</a></span></div>
+    </div>
+    
 </body>
 </html>
