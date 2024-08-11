@@ -88,6 +88,13 @@
         font-weight: normal;
         padding-right: 5px;
         margin-bottom: 10px;
+        /* height: 100%; */
+
+    }
+    #trend-head a{
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        font-size: 24px;
     }
     .trend-head-tag{
         color: rgb(255, 255, 255);
@@ -173,9 +180,10 @@
         <img src="./images/pasta.jpg">
         <div class="trending-pic-text">
             <ul>
-                <li id="trend-head">Creamy Steak Pasta</li>
+                <!-- <li id="trend-head">Creamy Steak Pasta</li> -->
+                <li id="trend-head"><a href="./recipes/lasagna.html">Creamy Steak Pasta</a></li>
                 <li><span class="trend-head-tag">Italian</span></li>
-                <li><p id="trend-head-p">Creamy Steak Pasta is a delicious pasta recipe the whole family loves! It's made with heavy cream, Parmesan cheese, sun dried tomatoes, pasta, and steak.</p></li>
+                <li><p id="trend-head-p"><p>Creamy Steak Pasta is a delicious pasta recipe the whole family loves!</p><p>It's made with heavy cream, Parmesan cheese, sun dried tomatoes, pasta, and steak.</p></p></li>
             </ul>
         </div>
     </div>
@@ -194,7 +202,7 @@
         <div>
             <div class="caption">
                 <div><a href="./recipes/biryani.html" class="recipe-head">Biryani</a></div>
-                <span class="trend-head-tag">Desi</span>
+                <span class="trend-head-tag" style="background-color: rgba(140, 101, 10, 0.815);">Desi</span>
                 <div class="recipe-caption">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam beatae incidunt at fugiat ipsa eius.</div>
             </div>
                 <div><img src="./images/biryani.jpeg"></div>
