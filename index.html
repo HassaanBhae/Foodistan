@@ -2,83 +2,214 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content=""width-device-width, initial-scale="1.0">
+    <meta name="viewport" content="width=device-width, initial-scale="1.0">
     <title>Homepage</title>
 </head>
 <style>
-    body {
-        background-image: url("./images/bg.jpg");
-        height: 100%;
-        background-position: center;
-        background-size: cover;
-    }
 
     @font-face {
         font-family: "Orpheus-italic";
         src: url("./fonts/orpheuspro-italic.otf");
     }
-    .recipe-text{
-        font-size: 20px;
-        color: black;
-        text-decoration: none;
-        font-weight: bold;
-        background-color: rgb(240, 240, 64);
+    @font-face {
+        font-family: "domaine-text";
+        src: url("./fonts/domaine-text.otf");
+    }
+
+
+
+    #logo{
+        font-family:"domaine-text";
+        border:0;
+        margin-left:20px;
+        margin-top: 0;
+        font-weight: lighter;
+    }
+    div.mainheader{
+        background-color: white;
+        border-color: black;
+        border-width: 2px;
+        border-style:dashed;
+        height: 150px;
+        width: 100%;
+        margin: 0%;
+        padding: 0%;
+    }
+    div.trending-pic{
+
+        height: 500px;
+        width: 100%;
+        margin: 0%;
+        padding: 0%;
+        overflow: hidden;
+        position: relative;
+        /* left: 20px; */
 
     }
-    .recipe-text:hover{
+    div.trending-pic img{
+        height: 80%;
+        width: 100%;
+        /* min-width: 80%; */
+        position: absolute;
+        /* left: 15%; */
+        object-fit: cover;
+        transform: scale(1.3);
+    }
+    div.trending-pic-text{
+        border-bottom-style: groove;
+        border-width: 2px;
+        height: 60%;
+        width: 30%;
+        max-width: 280px;
+        min-width: 165px;
+        margin: 0%;
+        padding-bottom: 0%;
+        /* font-size: 20px; */
+        color: rgb(0, 0, 0);
+        background-color: #F5F5F8; 
+        position: absolute;
+        bottom: 0px;
+        left: 1%;
+        /* font-size: 26px; */
+        /* padding: 5px; */
+        /* font-weight: lighter; */
+        text-align: start;
+        }
+    div.trending-pic-text ul{
+        list-style-type: none;
+        padding-inline-start: 10px;
+    }
+    li{
+        padding-bottom:5px ;
+    }
+    #trend-head{
+        font-size: 28px;
+        padding-left: 5px;
+        font-weight: normal;
+        padding-right: 5px;
+        margin-bottom: 10px;
+    }
+    .trend-head-tag{
+        color: rgb(255, 255, 255);
+        background-color: green;
+        font-size: 20px;
+        margin-top: 5px;
+        margin-left: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 2px;
+        padding-bottom: 2px;        
+    }
+    #trend-head-p{
+        margin-top: 10px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    #recipe-head{
+        font-family: "domaine-text";
+        text-align: center;
+        font-size: 28px;
+        font-weight: lighter;
+    }
+    div.pic-container{
+        display:flex;
+        overflow: hidden;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        gap: 20px;
+        justify-content: space-around;
+    }
+    div.pic-container div{
+        display:flex;
+    }
+    .caption {
+        display: flex;
+        background-color: #F5F5F8; 
+        flex-direction: column;
+        width: 150px;
+        /* border-style: groove; */
+        border-width: 2px;
+        /* border-top-style: groove; */
+        border-left-style: groove;
+        border-bottom-style: groove;
+        /* height: 220px; */
+    }
+    .recipe-head{
+        font-size: 24px;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        padding: 5px;
+        width: 350px;
+    }
+    .recipe-caption{
+        font-size: 15px;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        padding-left: 20px;
+    } 
+    /* .recipe-text:hover{
         color:green;
         background-color: rgb(152, 152, 83);
-
-    }
-    #mainhead{
-        text-align: center;
-        color: green;
-        background: linear-gradient(to top, #b27e3a 0%, #eacda3 100%);
-        font-size: 60px;
-        font-family:"Orpheus-italic";
-        border-radius: 20px;
-    }
-    div.span{
-        display: block;
-
-    }
-    span.caption{
-        /* background-color: rgb(240, 240, 64); */
-        border-radius: 5px;
-        display:inline-block;
-        border-style:solid;  
-        border-color: green;  
-        font-size: 20px;   
-    }
-    div.pic{
-        display: inline-block;
-        vertical-align:top;
-        margin: 30px;
-        text-align:center;
-
-
-    }
+    } */
     img{
-        height: 280px;
-        width: 430px;
-        border-radius: 30px;
+        display: block;
+        height: 200px;
+        width: 300px;
+        border-top-style: groove;
+        border-right-style: groove;
+        border-bottom-style: groove;
+        border-width: 2px;
 
     }
+
 
 </style>
 <body>
-    <h1 id="mainhead">Recipes</h1>
-    <div class="pic">
-        <img src="./images/lasagna.jpeg">
-        <div><span class="caption"><a href="./recipes/lasagna.html" class="recipe-text">Lasagna</a></span></div>
+    <div class="mainheader">
+        <h1 id="logo">Foodistan</h1>
+        <input type="search" style="width: 80%;">
     </div>
-    <div class="pic">
-        <img src="./images/biryani.jpeg">
-        <div><span class="caption"><a href="./recipes/biryani.html" class="recipe-text">Biryani</a></span></div>
+    <div class="trending-pic">
+        <img src="./images/pasta.jpg">
+        <div class="trending-pic-text">
+            <ul>
+                <li id="trend-head">Creamy Steak Pasta</li>
+                <li><span class="trend-head-tag">Italian</span></li>
+                <li><p id="trend-head-p">Creamy Steak Pasta is a delicious pasta recipe the whole family loves! It's made with heavy cream, Parmesan cheese, sun dried tomatoes, pasta, and steak.</p></li>
+            </ul>
+        </div>
     </div>
-    <div class="pic">
-        <img src="./images/pizza.jpeg">
-        <div><span class="caption"><a href="./recipes/pizza.html"   class="recipe-text">Pizza</a></span></div>
+    <h2 id="recipe-head">Recipes</h2>
+
+    <div class="pic-container">
+        <div>
+            <div class="caption">
+                <div><a href="./recipes/lasagna.html" class="recipe-head">Lasagna</a></div>
+                <div class="recipe-caption">text text txt</div>
+            </div>
+                <div><img src="./images/lasagna.jpeg"></div>
+        </div>
+    
+
+        <div>
+            <div class="caption">
+                <div><a href="./recipes/biryani.html" class="recipe-head">Biryani</a></div>
+                <span class="trend-head-tag">Desi</span>
+                <div class="recipe-caption">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam beatae incidunt at fugiat ipsa eius.</div>
+            </div>
+                <div><img src="./images/biryani.jpeg"></div>
+        </div>
+
+
+        <div>
+            <div class="caption">
+                <div><a href="./recipes/pizza.html"   class="recipe-head">Pizza</a></div>
+                <div class="recipe-caption">pizza pizza</div>
+            </div>
+                <div><img src="./images/pizza.jpeg"></div>
+        </div>
+
+
     </div>
     
 </body>
