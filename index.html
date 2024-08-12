@@ -27,13 +27,44 @@
     }
     div.mainheader{
         background-color: white;
-        border-color: black;
-        border-width: 2px;
-        border-style:dashed;
-        height: 150px;
+        height: 110px;
         width: 100%;
         margin: 0%;
         padding: 0%;
+        position: sticky;
+        top:0;
+        z-index: 10;
+        /* border-style: dotted;
+        border-width: 3px; */
+    }
+    #search-bar{
+        width: 90%;
+        position: absolute;
+        left:5%;
+        border-radius: 24px;
+        background-color: #F5F5F8;
+        border-color: #F5F5F8;
+        border-style: none;
+        height: 29px;
+        font-family:  sans-serif;
+        font-weight: 400;
+        text-transform: uppercase;
+        font-size: 12px;
+        padding-left:30px ;
+    }
+    #trending-now{
+
+        position: relative; 
+        /* z-index: 20; */
+        text-align: center;
+        /* align-self: center; */
+        font-weight: 100;
+        height: 30px;  
+        width: 100%;
+        /* top: -22px; */
+        margin: 0;
+        margin-bottom: 10px;
+
     }
     div.trending-pic{
 
@@ -68,12 +99,13 @@
         color: rgb(0, 0, 0);
         background-color: #F5F5F8; 
         position: absolute;
-        bottom: 0px;
-        left: 1%;
+        bottom: 10px;
+        left: 2%;
         /* font-size: 26px; */
         /* padding: 5px; */
         /* font-weight: lighter; */
         text-align: start;
+        box-shadow: -7px 8px 0px -2px;
         }
     div.trending-pic-text ul{
         list-style-type: none;
@@ -125,6 +157,7 @@
         margin-top: 20px;
         gap: 20px;
         justify-content: space-around;
+        padding: 20px;
     }
     div.pic-container div{
         display:flex;
@@ -135,10 +168,10 @@
         flex-direction: column;
         width: 150px;
         /* border-style: groove; */
-        border-width: 2px;
+        /* border-width: 2px;
         /* border-top-style: groove; */
-        border-left-style: groove;
-        border-bottom-style: groove;
+        /* border-left-style: groove; */
+        border-bottom-style: groove; 
         /* height: 220px; */
     }
     .recipe-head{
@@ -162,10 +195,10 @@
         display: block;
         height: 200px;
         width: 300px;
-        border-top-style: groove;
-        border-right-style: groove;
-        border-bottom-style: groove;
-        border-width: 2px;
+        /* border-top-style: groove;
+        border-right-style: groove; */
+        /* border-bottom-style: groove;
+        border-width: px;  */
 
     }
 
@@ -173,9 +206,13 @@
 </style>
 <body>
     <div class="mainheader">
-        <h1 id="logo">Foodistan</h1>
-        <input type="search" style="width: 80%;">
+        <div><h1 id="logo">Foodistan</h1></div>
+        <div>
+            <input id="search-bar" type="search" placeholder="S E A R C H">
+        </div>
+
     </div>
+    <h2 id="trending-now">Trending Now!</h2>
     <div class="trending-pic">
         <img src="./images/pasta.jpg">
         <div class="trending-pic-text">
@@ -216,8 +253,58 @@
             </div>
                 <div><img src="./images/pizza.jpeg"></div>
         </div>
+        <div>
+            <div class="caption">
+                <div><a href="./recipes/lasagna.html" class="recipe-head">Lasagna</a></div>
+                <div class="recipe-caption">text text txt</div>
+            </div>
+                <div><img src="./images/lasagna.jpeg"></div>
+        </div>
+    
+
+        <div>
+            <div class="caption">
+                <div><a href="./recipes/biryani.html" class="recipe-head">Biryani</a></div>
+                <span class="trend-head-tag" style="background-color: rgba(140, 101, 10, 0.815);">Desi</span>
+                <div class="recipe-caption">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam beatae incidunt at fugiat ipsa eius.</div>
+            </div>
+                <div><img src="./images/biryani.jpeg"></div>
+        </div>
 
 
+        <div>
+            <div class="caption">
+                <div><a href="./recipes/pizza.html"   class="recipe-head">Pizza</a></div>
+                <div class="recipe-caption">pizza pizza</div>
+            </div>
+                <div><img src="./images/pizza.jpeg"></div>
+        </div>
+        <div>
+            <div class="caption">
+                <div><a href="./recipes/lasagna.html" class="recipe-head">Lasagna</a></div>
+                <div class="recipe-caption">text text txt</div>
+            </div>
+                <div><img src="./images/lasagna.jpeg"></div>
+        </div>
+    
+
+        <div>
+            <div class="caption">
+                <div><a href="./recipes/biryani.html" class="recipe-head">Biryani</a></div>
+                <span class="trend-head-tag" style="background-color: rgba(140, 101, 10, 0.815);">Desi</span>
+                <div class="recipe-caption">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam beatae incidunt at fugiat ipsa eius.</div>
+            </div>
+                <div><img src="./images/biryani.jpeg"></div>
+        </div>
+
+
+        <div>
+            <div class="caption">
+                <div><a href="./recipes/pizza.html"   class="recipe-head">Pizza</a></div>
+                <div class="recipe-caption">pizza pizza</div>
+            </div>
+                <div><img src="./images/pizza.jpeg"></div>
+        </div>
     </div>
     
 </body>
