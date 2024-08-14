@@ -52,6 +52,12 @@
         font-size: 12px;
         padding-left:30px ;
     }
+    #search-icon{
+        font-size: 170%;
+        position: absolute;
+        z-index: 2;
+        left:5.2%
+    }
     #trending-now{
 
         position: relative; 
@@ -66,16 +72,26 @@
         margin-bottom: 10px;
 
     }
-    div.trending-pic{
 
+    div.trending-pic{
         height: 500px;
         width: 100%;
         margin: 0%;
         padding: 0%;
         overflow: hidden;
         position: relative;
-        /* left: 20px; */
-
+    }
+    .trending-pic-link{
+        height: 92%;
+        width: 100%;
+       /* min-width: 80%; */
+       position: absolute;
+       opacity: 0;
+       /* visibility: hidden; */
+       /* top: 200px; */
+        /* left: 15%; */
+        z-index: 500;
+        /* color: green; */
     }
     div.trending-pic img{
         height: 80%;
@@ -151,6 +167,21 @@
         font-weight: lighter;
         position: relative;
     }
+    #all-recipes-button{
+        position: absolute;
+        background-color: red;  
+        cursor: pointer;
+        background-color: white ;
+        top: 60%;
+        border-style: none ;
+        -ms-transform: translateY(-60%);
+        transform: translateY(-50%);
+        :hover{
+            background-color:#e5e5ea;
+             border-radius:10%; 
+             transition: 600ms;
+        }
+    }
 
     div.pic-container{
         display:flex;
@@ -161,48 +192,92 @@
         justify-content: space-around;
         padding-left: 20px;
     }
-    div.pic-container div{
+    .recipe-head-div{
         display:flex;
+        height: 200px;
+        width: 420px;
+        position: relative;
+        background-color: #F5F5F8;
+        overflow: hidden; 
+        /* border-radius: 3px; */
     }
-    .caption {
-        display: flex;
-        background-color: #F5F5F8; 
-        flex-direction: column;
-        width: 150px;
-        /* border-style: groove; */
-        /* border-width: 2px;
-        /* border-top-style: groove; */
-        /* border-left-style: groove; */
-        border-bottom-style: groove; 
-        /* height: 220px; */
+    .recipe-head-head{
+        position: absolute;
+        opacity: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 20;
+    }
+    .recipe-background{
+        width: 120px;
+        height: 100%;
+        background-color: #000000;
+        z-index: 2;
+        opacity: 0.6;
+        transition: width 0.5s;
     }
     .recipe-head{
+        position: absolute;
         font-size: 24px;
-        color: rgb(0, 0, 0);
-        text-decoration: none;
-        padding: 5px;
-        width: 350px;
+        color: rgb(255, 255, 255);
+        font-weight: 700;
+        transition:  0.5s;
+        padding-left: 5px;
+        top: 2%;
+        width: 97px;
+        z-index: 3;
+        text-align: center;
+        /* height: 200px ; */
+
     }
+
     .recipe-caption{
+        position: absolute;
         font-size: 15px;
-        color: rgb(0, 0, 0);
-        text-decoration: none;
+        color: rgb(255, 255, 255);
+        transition:  0.5s;
+        text-align: center;
         padding-left: 20px;
+        top: 30%;
+        width: 97px;
+        z-index: 3;
+        text-align: left;
+    }
+
+    .recipe-head-div:hover > .recipe-head {
+        top: 35%;
+        padding-left: 0%;
+        width: 420px;
+        font-size:40px;
+    }
+    .recipe-head-div:hover > .recipe-caption{
+        opacity: 0;
+        padding-left: 0%;
+        top: 50%;
+        /* font-size: 35%; */
+    }
+    .recipe-head-div:hover > .recipe-background{
+
+        width: 420px;
+        opacity: 0.8;
+    }
+    .recipe-img{
+        position: absolute;
+        z-index: 1;
+
     } 
-    /* .recipe-text:hover{
-        color:green;
-        background-color: rgb(152, 152, 83);
-    } */
+
     img{
         display: block;
         height: 200px;
-        width: 300px;
-        /* border-top-style: groove;
-        border-right-style: groove; */
-        /* border-bottom-style: groove;
-        border-width: px;  */
+        width: 420px;
 
     }
+    svg {
+        border-style: none;
+        font-size: 250%;
+    }
+
 
 
 </style>
@@ -210,12 +285,16 @@
     <div class="mainheader">
         <div><h1 id="logo">Foodistan</h1></div>
         <div>
+            <svg id="search-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                <path fill="currentColor" d="m19.485 20.154l-6.262-6.262q-.75.639-1.725.989t-1.96.35q-2.402 0-4.066-1.663T3.808 9.503T5.47 5.436t4.064-1.667t4.068 1.664T15.268 9.5q0 1.042-.369 2.017t-.97 1.668l6.262 6.261zM9.539 14.23q1.99 0 3.36-1.37t1.37-3.361t-1.37-3.36t-3.36-1.37t-3.361 1.37t-1.37 3.36t1.37 3.36t3.36 1.37" />
+            </svg> 
             <input id="search-bar" type="search" placeholder="S E A R C H">
         </div>
 
     </div>
     <h2 id="trending-now">Trending Now!</h2>
     <div class="trending-pic">
+        <a href="./recipes/lasagna.html" class="trending-pic-link">Creamy Steak Pasta</a>
         <img src="./images/pasta.jpg">
         <div class="trending-pic-text">
             <ul>
@@ -227,91 +306,75 @@
     </div>
         <div id="recipe-head">All Recipes
 
-            <button style="position: absolute;  top: 60%;-ms-transform: translateY(-60%);transform: translateY(-50%);border-radius: 2px;">Arrow</button>
+            <button id="all-recipes-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256">
+                    <path fill="currentColor" d="m202.83 146.83l-72 72a4 4 0 0 1-5.66 0l-72-72a4 4 0 0 1 5.66-5.66L124 206.34V40a4 4 0 0 1 8 0v166.34l65.17-65.17a4 4 0 0 1 5.66 5.66"/>
+                </svg>
+            </button>
 
         </div>
 
     
 
     <div class="pic-container">
-        <div>
-            <div class="caption">
-                <div><a href="./recipes/lasagna.html" class="recipe-head">Lasagna</a></div>
+
+        <div class="recipe-head-div">
+                <div class="recipe-background"></div>
+                <a href="./recipes/lasagna.html" class="recipe-head-head">Lasagna</a>
+                <div class="recipe-head">Lasagna</div>
                 <div class="recipe-caption">text text txt</div>
-            </div>
-                <div><img src="./images/lasagna.jpeg"></div>
-        </div>
+                <div class="recipe-img"><img src="./images/lasagna.jpeg"></div>
+        </div>                
     
 
-        <div>
-            <div class="caption">
-                <div><a href="./recipes/biryani.html" class="recipe-head">Biryani</a></div>
-                <span class="trend-head-tag" style="background-color: rgba(140, 101, 10, 0.815);">Desi</span>
-                <div class="recipe-caption">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam beatae incidunt at fugiat ipsa eius.</div>
-            </div>
-                <div><img src="./images/biryani.jpeg"></div>
+        <div class="recipe-head-div">
+                <div class="recipe-background"></div>
+                <a href="./recipes/biryani.html" class="recipe-head-head">Biryani</a>
+                <!-- <span class="trend-head-tag" style="background-color: rgba(140, 101, 10, 0.815);">Desi</span> -->
+                <div class="recipe-head">Chicken Biryani</div>
+                <div class="recipe-caption">Biryani is a mixed rice dish, mainly popular in South Asia. It is made with rice, chicken and spices.</div>
+                <div class="recipe-img"><img src="./images/biryani.jpeg"></div>
         </div>
 
 
-        <div>
-            <div class="caption">
-                <div><a href="./recipes/pizza.html"   class="recipe-head">Pizza</a></div>
+        <div class="recipe-head-div">
+                <div class="recipe-background"></div>
+                <a href="./recipes/pizza.html"   class="recipe-head-head">Pizza</a>
+                <div class="recipe-head">Pizza</div>
                 <div class="recipe-caption">pizza pizza</div>
-            </div>
-                <div><img src="./images/pizza.jpeg"></div>
+                <div class="recipe-img"><img src="./images/pizza.jpeg"></div>
         </div>
-        <div>
-            <div class="caption">
-                <div><a href="./recipes/lasagna.html" class="recipe-head">Lasagna</a></div>
-                <div class="recipe-caption">text text txt</div>
-            </div>
-                <div><img src="./images/lasagna.jpeg"></div>
-        </div>
-    
 
-        <div>
-            <div class="caption">
-                <div><a href="./recipes/biryani.html" class="recipe-head">Biryani</a></div>
-                <span class="trend-head-tag" style="background-color: rgba(140, 101, 10, 0.815);">Desi</span>
+
+        <div class="recipe-head-div">
+            <div class="recipe-background"></div>
+            <a href="./recipes/lasagna.html" class="recipe-head-head">Lasagna</a>
+            <div class="recipe-head">Lasagna</div>
+            <div class="recipe-caption">text text txt</div>
+            <div class="recipe-img"><img src="./images/lasagna.jpeg"></div>
+        </div>                
+
+
+        <div class="recipe-head-div">
+                <div class="recipe-background"></div>
+                <a href="./recipes/biryani.html" class="recipe-head-head">Biryani</a>
+                <!-- <span class="trend-head-tag" style="background-color: rgba(140, 101, 10, 0.815);">Desi</span> -->
+                <div class="recipe-head">Biryani</div>
                 <div class="recipe-caption">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam beatae incidunt at fugiat ipsa eius.</div>
-            </div>
-                <div><img src="./images/biryani.jpeg"></div>
+                <div class="recipe-img"><img src="./images/biryani.jpeg"></div>
         </div>
 
 
-        <div>
-            <div class="caption">
-                <div><a href="./recipes/pizza.html"   class="recipe-head">Pizza</a></div>
+        <div class="recipe-head-div">
+                <div class="recipe-background"></div>
+                <a href="./recipes/pizza.html"   class="recipe-head-head">Pizza</a>
+                <div class="recipe-head">Pizza</div>
                 <div class="recipe-caption">pizza pizza</div>
-            </div>
-                <div><img src="./images/pizza.jpeg"></div>
-        </div>
-        <div>
-            <div class="caption">
-                <div><a href="./recipes/lasagna.html" class="recipe-head">Lasagna</a></div>
-                <div class="recipe-caption">text text txt</div>
-            </div>
-                <div><img src="./images/lasagna.jpeg"></div>
-        </div>
-    
-
-        <div>
-            <div class="caption">
-                <div><a href="./recipes/biryani.html" class="recipe-head">Biryani</a></div>
-                <span class="trend-head-tag" style="background-color: rgba(140, 101, 10, 0.815);">Desi</span>
-                <div class="recipe-caption">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam beatae incidunt at fugiat ipsa eius.</div>
-            </div>
-                <div><img src="./images/biryani.jpeg"></div>
+                <div class="recipe-img"><img src="./images/pizza.jpeg"></div>
         </div>
 
 
-        <div>
-            <div class="caption">
-                <div><a href="./recipes/pizza.html"   class="recipe-head">Pizza</a></div>
-                <div class="recipe-caption">pizza pizza</div>
-            </div>
-                <div><img src="./images/pizza.jpeg"></div>
-        </div>
+
     </div>
     
 </body>
