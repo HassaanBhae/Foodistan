@@ -6,6 +6,9 @@
     <title>Homepage</title>
 </head>
 <style>
+    html{
+        scroll-behavior: smooth;
+    }
 
     @font-face {
         font-family: "Orpheus-italic";
@@ -15,10 +18,25 @@
         font-family: "domaine-text";
         src: url("./fonts/domaine-text.otf");
     }
+    ::-webkit-scrollbar {
+    width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+        background:#F5F5F8;
 
+    }
+    ::-webkit-scrollbar-thumb {
+    background: gray;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    }
+    body{
+        margin: 0%;
+        padding: 0%;
+    }
 
-
-    #logo{
+    #logo h1{
         font-family:"domaine-text";
         border:0;
         margin-left:20px;
@@ -33,9 +51,36 @@
         padding: 0%;
         position: sticky;
         top:0;
-        z-index: 10;
+        z-index: 20;
         /* border-style: dotted;
         border-width: 3px; */
+    }
+    #nav-bar{
+        position: absolute;
+        font-family: sans-serif;
+        /* right: 20px; */
+        /* top: -20; */
+        font-size: 16px;
+        width: 50%;
+        /* left: 34%; */
+        height:20px;
+        margin: auto;
+        z-index: 21;
+        /* bottom: 42%; */
+        /* translate: -50; */ 
+        left: 50%;
+        top:24px;
+        transform: translate(-50%, 0);
+
+    }
+    #nav-bar a{
+        text-align:center;
+        float: left;
+        text-decoration: none;
+        color: #000000;
+        word-spacing: -2px;
+        font-weight:lighter;
+        width: 25%;
     }
     #search-bar{
         width: 90%;
@@ -90,7 +135,7 @@
        /* visibility: hidden; */
        /* top: 200px; */
         /* left: 15%; */
-        z-index: 500;
+        z-index: 10;
         /* color: green; */
     }
     div.trending-pic img{
@@ -166,6 +211,8 @@
         font-size: 28px;
         font-weight: lighter;
         position: relative;
+        margin-bottom: 40px;
+
     }
     #all-recipes-button{
         position: absolute;
@@ -183,7 +230,7 @@
         }
     }
 
-    div.pic-container{
+    #pic-container{
         display:flex;
         overflow: hidden;
         flex-wrap: wrap;
@@ -209,7 +256,7 @@
         z-index: 20;
     }
     .recipe-background{
-        width: 120px;
+        width: 140px;
         height: 100%;
         background-color: #000000;
         z-index: 2;
@@ -224,7 +271,7 @@
         transition:  0.5s;
         padding-left: 5px;
         top: 2%;
-        width: 97px;
+        width: 120px;
         z-index: 3;
         text-align: center;
         /* height: 200px ; */
@@ -283,9 +330,18 @@
 </style>
 <body>
     <div class="mainheader">
-        <div><h1 id="logo">Foodistan</h1></div>
-        <div>
-            <svg id="search-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+            <div id="logo"><h1 >Foodistan</h1></div>
+        <div id="nav-bar">
+            <a href="#top">H O M E</a>
+            <a href="#">A B O U T</a>
+            <a href="#all-recipes-button">R E C I P E S</a>
+            <a href="#">S A V E D</a>
+        </div>
+
+
+
+
+        <div><svg id="search-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
                 <path fill="currentColor" d="m19.485 20.154l-6.262-6.262q-.75.639-1.725.989t-1.96.35q-2.402 0-4.066-1.663T3.808 9.503T5.47 5.436t4.064-1.667t4.068 1.664T15.268 9.5q0 1.042-.369 2.017t-.97 1.668l6.262 6.261zM9.539 14.23q1.99 0 3.36-1.37t1.37-3.361t-1.37-3.36t-3.36-1.37t-3.361 1.37t-1.37 3.36t1.37 3.36t3.36 1.37" />
             </svg> 
             <input id="search-bar" type="search" placeholder="S E A R C H">
@@ -306,23 +362,23 @@
     </div>
         <div id="recipe-head">All Recipes
 
-            <button id="all-recipes-button">
+            <a href="#all-recipes-button"><button type="button" id="all-recipes-button">
                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256">
                     <path fill="currentColor" d="m202.83 146.83l-72 72a4 4 0 0 1-5.66 0l-72-72a4 4 0 0 1 5.66-5.66L124 206.34V40a4 4 0 0 1 8 0v166.34l65.17-65.17a4 4 0 0 1 5.66 5.66"/>
                 </svg>
-            </button>
+            </button></a>
 
         </div>
 
     
 
-    <div class="pic-container">
+    <div id="pic-container">
 
         <div class="recipe-head-div">
                 <div class="recipe-background"></div>
                 <a href="./recipes/lasagna.html" class="recipe-head-head">Lasagna</a>
                 <div class="recipe-head">Lasagna</div>
-                <div class="recipe-caption">text text txt</div>
+                <div class="recipe-caption">Lasagna, pasta dish of Italian origin, made with broad often ruffled noodles and a tomato or white sauce.</div>
                 <div class="recipe-img"><img src="./images/lasagna.jpeg"></div>
         </div>                
     
@@ -340,8 +396,8 @@
         <div class="recipe-head-div">
                 <div class="recipe-background"></div>
                 <a href="./recipes/pizza.html"   class="recipe-head-head">Pizza</a>
-                <div class="recipe-head">Pizza</div>
-                <div class="recipe-caption">pizza pizza</div>
+                <div class="recipe-head">New York Pizza</div>
+                <div class="recipe-caption">New York-style pizza has large slices that are topped with tomato sauce and mozzarella cheese</div>
                 <div class="recipe-img"><img src="./images/pizza.jpeg"></div>
         </div>
 
