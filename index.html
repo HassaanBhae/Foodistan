@@ -6,10 +6,42 @@
     <title>Homepage</title>
 </head>
 <style>
+    @media screen and (min-width: 860px) {
+        #nav-bar{
+            font-size: 16px;
+        }
+        .nav-menu-button-container{
+            visibility: hidden;
+        }
+    }
+    @media screen and (max-width: 860px) {
+        #nav-bar{
+            font-size: 14px;
+        }
+        .nav-menu-button-container{
+            visibility: hidden;
+        }
+    }
+    @media screen and (max-width: 740px) {
+        #nav-bar{
+            font-size: 12px;
+        }
+        .nav-menu-button-container{
+            visibility: hidden;
+        }
+    }
+    @media screen and (max-width: 620px) {
+        #nav-bar{
+            visibility: hidden;
+        }
+        .nav-menu-button-container{
+            visibility: visible;
+        }
+    }
+
     html{
         scroll-behavior: smooth;
     }
-
     @font-face {
         font-family: "Orpheus-italic";
         src: url("./fonts/orpheuspro-italic.otf");
@@ -18,6 +50,7 @@
         font-family: "domaine-text";
         src: url("./fonts/domaine-text.otf");
     }
+
     ::-webkit-scrollbar {
     width: 10px;
     }
@@ -35,13 +68,16 @@
         margin: 0%;
         padding: 0%;
     }
-
     #logo h1{
         font-family:"domaine-text";
         border:0;
         margin-left:20px;
         margin-top: 0;
+        width: 35%;
         font-weight: lighter;
+        z-index: 100;
+        position:sticky;
+        /* visibility: hidden; */
     }
     div.mainheader{
         background-color: white;
@@ -51,7 +87,7 @@
         padding: 0%;
         position: sticky;
         top:0;
-        z-index: 20;
+        z-index: 100;
         /* border-style: dotted;
         border-width: 3px; */
     }
@@ -60,20 +96,22 @@
         font-family: sans-serif;
         /* right: 20px; */
         /* top: -20; */
-        font-size: 16px;
-        width: 50%;
+        /* font-size: 16px; */
+        width: 40%;
         /* left: 34%; */
         height:20px;
         margin: auto;
-        z-index: 21;
+        z-index: 90;
         /* bottom: 42%; */
         /* translate: -50; */ 
-        left: 50%;
         top:24px;
+        left: 77%;  
         transform: translate(-50%, 0);
-
     }
     #nav-bar a{
+        /* outline: rgb(0, 0, 0);
+        outline-width: 1px;
+        outline-style: solid; */
         text-align:center;
         float: left;
         text-decoration: none;
@@ -82,6 +120,67 @@
         font-weight:lighter;
         width: 25%;
     }
+    .nav-menu-button-container{
+        position: absolute;
+        /* font-size: 30px; */
+        /* z-index: 99; */
+        top: 16px;
+        left: 90%;
+    }
+    .nav-menu-button-container button{
+        border-style: none;    
+        position: sticky;
+        border-width: 0px;    
+        background-color: white;
+        cursor: pointer;
+        z-index: 2000;
+        :hover{  
+            background-color:#e5e5ea;
+            border-radius:10%; 
+            transition: 600ms;
+        }
+
+    }
+    #nav-menu-svg{
+        font-size: 30px;
+    }
+    .dropdown-content {
+        position:relative;
+        height: 140px;
+        width:calc(100vw);
+        /* right: 10000px; */
+        /* right: 100%; */
+        right: calc(89vw);
+        z-index: 3;
+        display: flex;
+        flex-direction: column;
+        background-color: #ffffff;
+        padding-top: 50px;
+        bottom: 50px;
+        display: none;
+    }
+    .dropdown-content a{
+        float: none;
+        position: relative;
+        outline: rgb(0, 0, 0);
+        padding-left:25px;
+        height: 25%;
+        /* z-index: -10; */
+        text-decoration: none;
+        color: #000000;
+        font-family: sans-serif;
+        font-weight:lighter;
+        top: 10px;
+        display: block;
+    }
+    .nav-menu-button-container:hover  .dropdown-content{
+        display: block;
+    }
+    /* .nav-menu-button-container:hover .dropdown-content{
+
+        display: flex;
+    } */
+        
     #search-bar{
         width: 90%;
         position: absolute;
@@ -96,6 +195,7 @@
         text-transform: uppercase;
         font-size: 12px;
         padding-left:30px ;
+        outline: none;
     }
     #search-icon{
         font-size: 170%;
@@ -115,6 +215,7 @@
         /* top: -22px; */
         margin: 0;
         margin-bottom: 10px;
+        margin-top: 10px;
 
     }
 
@@ -239,6 +340,14 @@
         justify-content: space-around;
         padding-left: 20px;
     }
+    #for-all-recipe-button{
+        position: absolute;
+        height: 120px;
+        width: 320px;
+        /* background-color: aqua; */
+        bottom: 20px;
+        z-index: -20;
+    }
     .recipe-head-div{
         display:flex;
         height: 200px;
@@ -331,15 +440,24 @@
 <body>
     <div class="mainheader">
             <div id="logo"><h1 >Foodistan</h1></div>
+        <div class="nav-menu-button-container">
+            <button class="nav-button"><svg id="nav-menu-svg" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            </button>
+            <div class="dropdown-content">
+                <a href="#top">H O M E</a>
+                <a href="#">A B O U T</a>
+                <a href="#for-all-recipe-button">R E C I P E S</a>
+                <a href="#">S A V E D</a>
+            </div>
+        </div>
         <div id="nav-bar">
             <a href="#top">H O M E</a>
             <a href="#">A B O U T</a>
-            <a href="#all-recipes-button">R E C I P E S</a>
+            <a href="#for-all-recipe-button">R E C I P E S</a>
             <a href="#">S A V E D</a>
         </div>
-
-
-
 
         <div><svg id="search-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
                 <path fill="currentColor" d="m19.485 20.154l-6.262-6.262q-.75.639-1.725.989t-1.96.35q-2.402 0-4.066-1.663T3.808 9.503T5.47 5.436t4.064-1.667t4.068 1.664T15.268 9.5q0 1.042-.369 2.017t-.97 1.668l6.262 6.261zM9.539 14.23q1.99 0 3.36-1.37t1.37-3.361t-1.37-3.36t-3.36-1.37t-3.361 1.37t-1.37 3.36t1.37 3.36t3.36 1.37" />
@@ -362,7 +480,7 @@
     </div>
         <div id="recipe-head">All Recipes
 
-            <a href="#all-recipes-button"><button type="button" id="all-recipes-button">
+            <a href="#for-all-recipe-button"><button type="button" id="all-recipes-button">
                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256">
                     <path fill="currentColor" d="m202.83 146.83l-72 72a4 4 0 0 1-5.66 0l-72-72a4 4 0 0 1 5.66-5.66L124 206.34V40a4 4 0 0 1 8 0v166.34l65.17-65.17a4 4 0 0 1 5.66 5.66"/>
                 </svg>
@@ -373,7 +491,7 @@
     
 
     <div id="pic-container">
-
+        <di id="for-all-recipe-button"></di>
         <div class="recipe-head-div">
                 <div class="recipe-background"></div>
                 <a href="./recipes/lasagna.html" class="recipe-head-head">Lasagna</a>
