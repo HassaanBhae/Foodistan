@@ -6,41 +6,100 @@
     <title>Homepage</title>
 </head>
 <style>
-    @media screen and (min-width: 860px) {
+    @media screen and (min-width: 960px) {
         #nav-bar{
             font-size: 16px;
         }
         .nav-menu-button-container{
             visibility: hidden;
         }
+        .trending-pic{
+            height: 500px;
+        }
+        .recipe-head-div:hover > .recipe-head {
+        top: 35%;
+        padding-left: 0%;
+        width: 420px;
+        font-size:40px;
+        }
+        .recipe-head-div:hover > .recipe-caption{
+            opacity: 0;
+            padding-left: 0%;
+            top: 50%;
+        }
+        .recipe-head-div:hover > .recipe-background{
+
+            width: 420px;
+            opacity: 0.8;
+        }
+        #for-all-recipe-button{
+            top: 80%;
+        } 
     }
-    @media screen and (max-width: 860px) {
+    @media screen and (max-width: 960px) {
         #nav-bar{
             font-size: 14px;
         }
         .nav-menu-button-container{
             visibility: hidden;
         }
-    }
-    @media screen and (max-width: 740px) {
-        #nav-bar{
-            font-size: 12px;
+        .trending-pic{
+            height: 500px;
         }
-        .nav-menu-button-container{
-            visibility: hidden;
+        .recipe-head-div:hover > .recipe-head {
+        top: 35%;
+        padding-left: 0%;
+        width: 420px;
+        font-size:40px;
         }
+        .recipe-head-div:hover > .recipe-caption{
+            opacity: 0;
+            padding-left: 0%;
+            top: 50%;
+        }
+        .recipe-head-div:hover > .recipe-background{
+
+            width: 420px;
+            opacity: 0.8;
+        }
+        #for-all-recipe-button{
+            top: 80%;
+        } 
     }
-    @media screen and (max-width: 620px) {
+    @media screen and (max-width: 768px) {
         #nav-bar{
             visibility: hidden;
         }
         .nav-menu-button-container{
             visibility: visible;
         }
-    }
-
-    html{
-        scroll-behavior: smooth;
+        #all-recipes-button svg{
+             font-size: 340%;
+        }
+        .trending-pic{
+            height: calc(60vh);
+        }
+        .trend-head-p{
+            font-size: 14px;
+        }
+        .recipe-head-div:hover > .recipe-head {
+            top: 2%;
+            padding-left: 5px;
+            width: 120px;
+            font-size: 24px;
+        }
+        .recipe-head-div:hover > .recipe-caption{
+            opacity: 1;
+            padding-left: 20px;
+            top: 30%;
+        }
+        .recipe-head-div:hover > .recipe-background{
+            width: 140px;
+            opacity: 0.6;
+        }
+        #for-all-recipe-button{
+            top: 76%;
+        } 
     }
     @font-face {
         font-family: "Orpheus-italic";
@@ -64,9 +123,19 @@
     ::-webkit-scrollbar-thumb:hover {
     background: #555;
     }
+    html{
+        scroll-behavior: smooth;
+        /* height: 100%;
+        overflow: hidden;
+        width: 100%; */
+    }
     body{
         margin: 0%;
         padding: 0%;
+        /* height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: 100%; */
     }
     #logo h1{
         font-family:"domaine-text";
@@ -88,6 +157,7 @@
         position: sticky;
         top:0;
         z-index: 100;
+
         /* border-style: dotted;
         border-width: 3px; */
     }
@@ -125,7 +195,7 @@
         /* font-size: 30px; */
         /* z-index: 99; */
         top: 16px;
-        left: 90%;
+        left: 84%;
         width: 20px;
     }
     .nav-menu-button-container button{
@@ -135,6 +205,7 @@
         background-color: white;
         cursor: pointer;
         z-index: 2000;
+        color: #000000;
         :hover{  
             background-color:#e5e5ea;
             border-radius:10%; 
@@ -148,10 +219,8 @@
     .dropdown-content {
         position:relative;
         height: 140px;
-        width:calc(90vw);
-        /* right: 10000px; */
-        /* right: 100%; */
-        right: calc(89vw);
+        width:calc(100vw);
+        right: calc(85vw);
         z-index: 3;
         display: flex;
         flex-direction: column;
@@ -222,7 +291,7 @@
     }
 
     div.trending-pic{
-        height: 500px;
+        /* height: calc(70vh); */
         width: 100%;
         margin: 0%;
         padding: 0%;
@@ -303,8 +372,8 @@
         padding-top: 2px;
         padding-bottom: 2px;        
     }
-    #trend-head-p{
-        margin-top: 10px;
+    .trend-head-p{
+        margin-bottom: 10px;
         padding-left: 5px;
         padding-right: 5px;
     }
@@ -319,9 +388,9 @@
     }
     #all-recipes-button{
         position: absolute;
-        background-color: red;  
         cursor: pointer;
         background-color: white ;
+        color: #000000;
         top: 60%;
         border-style: none ;
         -ms-transform: translateY(-60%);
@@ -332,6 +401,10 @@
              transition: 600ms;
         }
     }
+    #for-all-recipe-button{
+        position: relative;
+        /* top: 80%; */
+    } 
 
     #pic-container{
         display:flex;
@@ -339,16 +412,9 @@
         flex-wrap: wrap;
         margin-top: 20px;
         gap: 20px;
+        /* height: 100%; */
         justify-content: space-around;
-        padding-left: 20px;
-    }
-    #for-all-recipe-button{
-        position: absolute;
-        height: 120px;
-        width: 320px;
-        /* background-color: aqua; */
-        bottom: 20px;
-        z-index: -20;
+        /* padding-left: 20px; */
     }
     .recipe-head-div{
         display:flex;
@@ -402,7 +468,7 @@
         text-align: left;
     }
 
-    .recipe-head-div:hover > .recipe-head {
+    /* .recipe-head-div:hover > .recipe-head {
         top: 35%;
         padding-left: 0%;
         width: 420px;
@@ -412,13 +478,12 @@
         opacity: 0;
         padding-left: 0%;
         top: 50%;
-        /* font-size: 35%; */
     }
     .recipe-head-div:hover > .recipe-background{
 
         width: 420px;
         opacity: 0.8;
-    }
+    } */
     .recipe-img{
         position: absolute;
         z-index: 1;
@@ -434,6 +499,11 @@
     svg {
         border-style: none;
         font-size: 250%;
+    }
+    br{
+        display: block;
+        content: "";
+        margin-top:4px;
     }
 
 
@@ -476,9 +546,11 @@
             <ul>
                 <li id="trend-head"><a href="./recipes/lasagna.html">Creamy Steak Pasta</a></li>
                 <li><span class="trend-head-tag">Italian</span></li>
-                <li><p id="trend-head-p"><p>Creamy Steak Pasta is a delicious pasta recipe the whole family loves!</p><p>It's made with heavy cream, Parmesan cheese, sun dried tomatoes, pasta, and steak.</p></p></li>
+                <li><p class="trend-head-p">Creamy Steak Pasta is a delicious pasta recipe the whole family loves!<br>It's made with heavy cream, Parmesan cheese, sun dried tomatoes, pasta, and steak.</p></p></li>
             </ul>
         </div>
+        <div id="for-all-recipe-button"></div>
+
     </div>
         <div id="recipe-head">All Recipes
 
@@ -488,18 +560,19 @@
                 </svg>
             </button></a>
 
+
         </div>
 
     
 
     <div id="pic-container">
-        <di id="for-all-recipe-button"></di>
         <div class="recipe-head-div">
                 <div class="recipe-background"></div>
                 <a href="./recipes/lasagna.html" class="recipe-head-head">Lasagna</a>
                 <div class="recipe-head">Lasagna</div>
                 <div class="recipe-caption">Lasagna, pasta dish of Italian origin, made with broad often ruffled noodles and a tomato or white sauce.</div>
                 <div class="recipe-img"><img src="./images/lasagna.jpeg"></div>
+
         </div>                
     
 
@@ -517,7 +590,7 @@
                 <div class="recipe-background"></div>
                 <a href="./recipes/pizza.html"   class="recipe-head-head">Pizza</a>
                 <div class="recipe-head">New York Pizza</div>
-                <div class="recipe-caption">New York-style pizza has large slices that are topped with tomato sauce and mozzarella cheese</div>
+                <div class="recipe-caption">New York-style pizza has large slices that are topped with tomato sauce and mozzarella cheese.</div>
                 <div class="recipe-img"><img src="./images/pizza.jpeg"></div>
         </div>
 
