@@ -47,10 +47,10 @@
             height: 500px;
         }
         .recipe-head-div:hover > .recipe-head {
-        top: 35%;
-        padding-left: 0%;
-        width: 420px;
-        font-size:40px;
+            top: 35%;
+            padding-left: 0%;
+            width: 420px;
+            font-size:40px;
         }
         .recipe-head-div:hover > .recipe-caption{
             opacity: 0;
@@ -125,17 +125,11 @@
     }
     html{
         scroll-behavior: smooth;
-        /* height: 100%;
-        overflow: hidden;
-        width: 100%; */
     }
     body{
         margin: 0%;
         padding: 0%;
-        /* height: 100%;
-        overflow-x: hidden;
-        overflow-y: auto;
-        width: 100%; */
+        /* background-color:#F5F5F8; */
     }
     #logo h1{
         font-family:"domaine-text";
@@ -158,7 +152,7 @@
         top:0;
         z-index: 100;
 
-        /* border-style: dotted;
+        /* border-left-style: dotted;
         border-width: 3px; */
     }
     #nav-bar{
@@ -287,6 +281,8 @@
         margin: 0;
         margin-bottom: 10px;
         margin-top: 10px;
+        background-color: #ffffff;
+        /* padding:top; */
 
     }
 
@@ -412,9 +408,8 @@
         flex-wrap: wrap;
         margin-top: 20px;
         gap: 20px;
-        /* height: 100%; */
         justify-content: space-around;
-        /* padding-left: 20px; */
+        padding-bottom: 100px;
     }
     .recipe-head-div{
         display:flex;
@@ -422,8 +417,8 @@
         width: 420px;
         position: relative;
         background-color: #F5F5F8;
-        overflow: hidden; 
-        /* border-radius: 3px; */
+        /* overflow: hidden;  */
+
     }
     .recipe-head-head{
         position: absolute;
@@ -439,6 +434,8 @@
         z-index: 2;
         opacity: 0.6;
         transition: width 0.5s;
+        box-shadow: -7px 8px 0px -2px black;
+
     }
     .recipe-head{
         position: absolute;
@@ -569,8 +566,8 @@
         <div class="recipe-head-div">
                 <div class="recipe-background"></div>
                 <a href="./recipes/lasagna.html" class="recipe-head-head">Lasagna</a>
-                <div class="recipe-head">Lasagna</div>
-                <div class="recipe-caption">Lasagna, pasta dish of Italian origin, made with broad often ruffled noodles and a tomato or white sauce.</div>
+                <div class="recipe-head">Neapolitan lasagna</div>
+                <div class="recipe-caption">It is a dish of Italian origin, made with broad often ruffled noodles and a tomato or white sauce.</div>
                 <div class="recipe-img"><img src="./images/lasagna.jpeg"></div>
 
         </div>                
@@ -582,7 +579,7 @@
                 <!-- <span class="trend-head-tag" style="background-color: rgba(140, 101, 10, 0.815);">Desi</span> -->
                 <div class="recipe-head">Chicken Biryani</div>
                 <div class="recipe-caption">Biryani is a mixed rice dish, mainly popular in South Asia. It is made with rice, chicken and spices.</div>
-                <div class="recipe-img"><img src="./images/biryani.jpeg"></div>
+                <div class="recipe-img"><img src="./images/biryani.jpg"></div>
         </div>
 
 
@@ -598,9 +595,9 @@
         <div class="recipe-head-div">
             <div class="recipe-background"></div>
             <a href="./recipes/lasagna.html" class="recipe-head-head">Lasagna</a>
-            <div class="recipe-head">Lasagna</div>
-            <div class="recipe-caption">text text txt</div>
-            <div class="recipe-img"><img src="./images/lasagna.jpeg"></div>
+            <div class="recipe-head">Salmon Sushi</div>
+            <div class="recipe-caption">Type of raw fish for sushi besides tuna, salmon is delicious both raw and lightly seared.</div>
+            <div class="recipe-img"><img src="./images/salmon.jpg"></div>
         </div>                
 
 
@@ -608,18 +605,18 @@
                 <div class="recipe-background"></div>
                 <a href="./recipes/biryani.html" class="recipe-head-head">Biryani</a>
                 <!-- <span class="trend-head-tag" style="background-color: rgba(140, 101, 10, 0.815);">Desi</span> -->
-                <div class="recipe-head">Biryani</div>
-                <div class="recipe-caption">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam beatae incidunt at fugiat ipsa eius.</div>
-                <div class="recipe-img"><img src="./images/biryani.jpeg"></div>
+                <div class="recipe-head">Beef Burger</div>
+                <div class="recipe-caption">High quality beef medium to well with cheese and sauces on a multigrain bun.</div>
+                <div class="recipe-img"><img src="./images/burger.jpg"></div>
         </div>
 
 
         <div class="recipe-head-div">
                 <div class="recipe-background"></div>
                 <a href="./recipes/pizza.html"   class="recipe-head-head">Pizza</a>
-                <div class="recipe-head">Pizza</div>
-                <div class="recipe-caption">pizza pizza</div>
-                <div class="recipe-img"><img src="./images/pizza.jpeg"></div>
+                <div class="recipe-head">Shrimp Tacos</div>
+                <div class="recipe-caption">Shrimp Tacos are loaded with  juicy shrimp, crisp cabbage, avocado, cotija cheese, cilantro and shrimp taco sauce.</div>
+                <div class="recipe-img"><img src="./images/tacos.jpg"></div>
         </div>
 
 
