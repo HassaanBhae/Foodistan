@@ -9,6 +9,12 @@
     .trending-pic{
         height: 500px;
     }
+    .recipe-head{
+        font-size: 24px;
+    }
+    .recipe-caption{
+        font-size: 15px;
+    }
     .recipe-head-div:hover > .recipe-head {
         top: 35%;
         padding-left: 0%;
@@ -39,6 +45,12 @@
     .trending-pic{
         height: 500px;
     }
+    .recipe-head{
+        font-size: 24px;
+    }
+    .recipe-caption{
+        font-size: 15px;
+    }
     .recipe-head-div:hover > .recipe-head {
         top: 35%;
         padding-left: 0%;
@@ -67,6 +79,12 @@
     }
     #all-recipes-button svg{
         font-size: 340%;
+    }
+    .recipe-head{
+        font-size: 24px;
+    }
+    .recipe-caption{
+        font-size: 15px;
     }
     .trending-pic{
         height: calc(60vh);
@@ -107,6 +125,12 @@
         height: calc(60vh);
     }
     .trend-head-p{
+        font-size: 13px;
+    }
+    .recipe-head{
+        font-size: 20px;
+    }
+    .recipe-caption{
         font-size: 13px;
     }
     .recipe-head-div:hover > .recipe-head {
@@ -464,7 +488,6 @@ li{
 }
 .recipe-head{
     position: absolute;
-    font-size: 24px;
     color: rgb(255, 255, 255);
     font-weight: 700;
     transition:  0.5s;
@@ -475,9 +498,9 @@ li{
     text-align: center;
 }
 
+
 .recipe-caption{
     position: absolute;
-    font-size: 15px;
     color: rgb(255, 255, 255);
     transition:  0.5s;
     text-align: center;
@@ -487,6 +510,7 @@ li{
     z-index: 3;
     text-align: left;
 }
+
 
 .recipe-img{
     position: absolute;
