@@ -3,33 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pizza</title>
+    <title>New York Pizza | Foodistan</title>
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <h1>Pizza</h1>
-    <img src="../images/pizza.jpeg">
-        <h2>Description:</h2>
-            <p>It is a dish of Italian origin consisting of a flattened disk of bread dough topped with some combination of olive oil, oregano, tomato, olives, mozzarella or other cheese, and many other ingredients.</p>
-            <p>It's baked quickly—usually, in a commercial setting, using a wood-fired oven heated to a very high temperature—and served hot.</p>
-        <h2>Ingredients:</h2>
+    <div class="mainheader">
+        <div id="logo"><h1 >Foodistan</h1></div>
+        <label id="nav-menu">
+            <input type="checkbox">
+            <div class="nav-button">
+                <div class="line" id="firstline"></div>
+                <div class="line" id="middleline"></div>
+                <div class="line" id="lastline"></div>
+            </div>
+            <div class="dropdown-content">
+                <a href="../index.html">H O M E</a>
+                <a href="#">A B O U T</a>
+                <a href="../index.html#for-all-recipe-button">R E C I P E S</a>
+                <a href="#">S A V E D</a>
+            </div>
+        </label>
+        <div id="nav-bar">
+            <a href="../index.html">H O M E</a>
+            <a href="#">A B O U T</a>
+            <a href="../index.html#for-all-recipe-button">R E C I P E S</a>
+            <a href="#">S A V E D</a>
+        </div>
+
+        <div><svg id="search-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                <path fill="currentColor" d="m19.485 20.154l-6.262-6.262q-.75.639-1.725.989t-1.96.35q-2.402 0-4.066-1.663T3.808 9.503T5.47 5.436t4.064-1.667t4.068 1.664T15.268 9.5q0 1.042-.369 2.017t-.97 1.668l6.262 6.261zM9.539 14.23q1.99 0 3.36-1.37t1.37-3.361t-1.37-3.36t-3.36-1.37t-3.361 1.37t-1.37 3.36t1.37 3.36t3.36 1.37" />
+            </svg> 
+            <input id="search-bar" type="search" placeholder="S E A R C H">
+        </div>
+    </div>
+    <div class="container">
+        <div class="trending-pic">
+            <img src="../images/pizza.jpeg">
+        </div>
+        <div class="trending-pic-text">
             <ul>
-                <li>Pizza Dough.</li>
-                <li>Garlic Oil.</li>
-                <li>Pizza Toppings.</li>
-                <li>Tomatoe Sauce.</li>
-                <li>Cheeses.</li>
-                <li>Meat.</li>
-                <li>Mushrooms.</li>
+                <li id="trend-head"><h2">New York Pizza</h2></li>
+                <li><span class="trend-head-tag italian">Italian</span></li>
+                <li><p class="trend-head-p">New York-style pizza has large slices that are topped with tomato sauce and mozzarella cheese.</p></li>
             </ul>
-        <h2>Steps:</h2>
-            <ol>
-                <li>Make the dough.</li>
-                <li>Make the garlic oil, then brush it onto the grill grates.</li>
-                <li>Shape the dough and place it on the hot grill.</li>
-                <li>Flip the crust and brush with oil.</li>
-                <li>Marinate the chicken in spices and yogurt.</li>
-                <li>Top the pizza however you like, close the lid, and cook until the cheese melts.</li>
-            </ol>
-        <a href="../index.html">Go Back To Homepage!</a>
+        </div>
+        <div class="recipe"> 
+            <h2 id="ingredients">Ingredients:</h2>
+                <div id="ingredients-container">
+                    <label>
+                        <input type="checkbox">
+                        <div class="checkmark"></div>
+                        <span>Pizza Dough</span>
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        <div class="checkmark"></div>
+                        <span>Garlic Oil</span>
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        <div class="checkmark"></div>
+                        <span>Pizza Toppings</span>
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        <div class="checkmark"></div>
+                        <span>Tomatoe Sauce</span>
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        <div class="checkmark"></div>
+                        <span>Cheeses</span>
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        <div class="checkmark"></div>
+                        <span>Meat</span>
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        <div class="checkmark"></div>
+                        <span>Mushrooms</span>
+                    </label>
+                </div>
+            <div id="steps-container">
+            <h2 id="ingredients">Steps:</h2>
+                <ol>
+                    <li>Make the dough.</li>
+                    <li>Make the garlic oil, then brush it onto the grill grates.</li>
+                    <li>Shape the dough and place it on the hot grill.</li>
+                    <li>Flip the crust and brush with oil.</li>
+                    <li>Marinate the chicken in spices and yogurt.</li>
+                    <li>Top the pizza however you like, close the lid, and cook until the cheese melts.</li>
+                </ol>
+            </div>
+        </div> 
+    </div>
 </body>
 </html>

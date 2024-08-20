@@ -7,26 +7,23 @@
         visibility: hidden;
     }
     .trending-pic{
-        height: 500px;
+        height: 450px;
     }
-    .recipe-head-div:hover > .recipe-head {
-        top: 35%;
-        padding-left: 0%;
-        width: 420px;
-        font-size:40px;
+    div.trending-pic img{
+        left: -100px;
+        transform: scale(1.4);
     }
-    .recipe-head-div:hover > .recipe-caption{
-        opacity: 0;
-        padding-left: 0%;
-        top: 50%;
+    div.trending-pic-text{
+        height: 450px;
     }
-    .recipe-head-div:hover > .recipe-background{
-
-        width: 420px;
-        opacity: 0.8;
+    .recipe{
+        top: 600px;
     }
-    #for-all-recipe-button{
-        top: 80%;
+    #ingredients-container{
+        font-size: 18px;
+    }
+    #steps-container{
+        font-size: 20px;
     }
 }
 @media screen and (max-width: 960px) {
@@ -39,25 +36,25 @@
     .trending-pic{
         height: 500px;
     }
-    .recipe-head-div:hover > .recipe-head {
-        top: 35%;
-        padding-left: 0%;
-        width: 420px;
-        font-size:40px;
+    div.trending-pic{
+        height: 450px;
     }
-    .recipe-head-div:hover > .recipe-caption{
-        opacity: 0;
-        padding-left: 0%;
-        top: 50%;
+    div.trending-pic img{
+        left: -100px;
+        transform: scale(1.5);
     }
-    .recipe-head-div:hover > .recipe-background{
-
-        width: 420px;
-        opacity: 0.8;
+    div.trending-pic-text{
+        height: 450px;
     }
-    #for-all-recipe-button{
-        top: 80%;
-    } 
+    .recipe{
+        top: 600px;
+    }
+    #ingredients-container{
+        font-size: 18px;
+    }
+    #steps-container{
+        font-size: 20px;
+    }
 }
 @media screen and (max-width: 768px) {
     #nav-bar{
@@ -66,32 +63,30 @@
     .nav-button{
         visibility: visible;
     }
-    #all-recipes-button svg{
-            font-size: 340%;
-    }
     .trending-pic{
         height: calc(60vh);
     }
     .trend-head-p{
         font-size: 14px;
     }
-    .recipe-head-div:hover > .recipe-head {
-        top: 2%;
-        padding-left: 5px;
-        width: 120px;
-        font-size: 24px;
+    div.trending-pic{
+        height: 350px;
     }
-    .recipe-head-div:hover > .recipe-caption{
-        opacity: 1;
-        padding-left: 20px;
-        top: 30%;
+    div.trending-pic img{
+        left: -10%;
+        transform: scale(1.2);
     }
-    .recipe-head-div:hover > .recipe-background{
-        width: 140px;
-        opacity: 0.6;
+    div.trending-pic-text{
+        height: 350px;
     }
-    #for-all-recipe-button{
-        top: 76%;
+    .recipe{
+        top: 500px;
+    }
+    #ingredients-container{
+        font-size: 16px;
+    }
+    #steps-container{
+        font-size: 18px;
     }
 }
 @media (hover: hover) {
@@ -127,8 +122,7 @@ html{
 }
 body{
     margin: 0%;
-    padding-bottom: 10%;
-    /* height: 100%; */
+    /* padding-bottom: 20%; */
 }
 #logo h1{
     font-family:"domaine-text";
@@ -197,10 +191,6 @@ div.mainheader{
     right: 140%;
     margin-right: calc(5vw);
 }
-/* .nav-button:hover{
-    background-color: #e5e5ea;
-} */
-
 #nav-menu input:checked ~ .nav-button{
     background-color: #e5e5ea;
 }
@@ -285,37 +275,56 @@ div.mainheader{
     left:5.2%
 }
 
+
+/* MAIN PICCCCCCCC */
+.container{
+    /* position: relative; */
+    width: calc(100vw);
+    height: 1100px;
+    /* background-color: saddlebrown; */
+}
+
+
 div.trending-pic{
-    width: 100%;
+    width: 60%;
     margin: 0%;
     padding: 0%;
     overflow: hidden;
-    position: relative;
+    position: absolute;
+    /* height: 450px; */
+    left: 2%;
+    margin-right: 200px;
+    /* border-top-right-radius: 3%; */
+    /* border-bottom-right-radius: 3%; */
+    border: solid;
+    /* border-bottom: solid; */
+    /* border-top: solid; */
+    border-width: 2px;
+    /* border-color: #F5F5F8; */
 }
 
 div.trending-pic img{
-    height: 80%;
+    height: 100%;
     width: 100%;
+    /* left: -100px; */
     position: absolute;
     object-fit: cover;
-    transform: scale(1.3);
+    /* transform: scale(1.5); */
 }
 div.trending-pic-text{
     border-bottom-style: groove;
     border-width: 2px;
-    height: 60%;
     width: 30%;
-    max-width: 280px;
     min-width: 165px;
     margin: 0%;
     padding-bottom: 0%;
     color: rgb(0, 0, 0);
     background-color: #F5F5F8; 
     position: absolute;
-    bottom: 10px;
-    left: 2%;
+    right: 0px;
+    margin-right: 2%;
     text-align: start;
-    box-shadow: -7px 8px 0px -2px;
+    border: #000000 2px solid;
 }
 div.trending-pic-text ul{
     list-style-type: none;
@@ -337,7 +346,6 @@ li{
 }
 .trend-head-tag{
     color: rgb(255, 255, 255);
-    /* background-color: green; */
     font-size: 20px;
     margin-top: 5px;
     margin-left: 5px;
@@ -355,8 +363,11 @@ li{
 .japanese{
     background-color: darkred;
 }
-.asian{
+.desi{
     background-color: rgb(193, 154, 107);
+}
+.german{
+    background-color: red;
 }
 .trend-head-p{
     margin-bottom: 10px;
@@ -364,10 +375,18 @@ li{
     padding-right: 5px;
 }
 .recipe{
+    position: absolute ;
     background-color:#e5e5ea;
-    margin: 20px;
     padding-bottom: 50px;
-    box-shadow: -7px 8px 0px -2px;
+    border: 2px black solid;
+    border-radius: 10px;
+    /* margin: 200px; */
+    /* box-shadow: -7px 8px 0px -2px,-7px 8px 0px -2px inset; */
+    height: 600px;
+    width: 80%;
+    left: 10%;
+    /* top: 500px; */
+    /* top: 500px; */
 }
 #ingredients{
     position: relative; 
@@ -376,33 +395,44 @@ li{
     top: 10px;
 }
 #ingredients-container{
-    outline: rgb(136, 0, 0) 2px solid;
     height: 200px;
     width: 90%;
     margin-left: 5%;
+    /* font-size: 18px; */
+    padding-top: 10px;
 }
-
+#ingredients-container label{
+    display: flex;
+    justify-content: flex-start;
+    cursor: pointer;
+}
 .recipe input{
     position: relative;
     height: 0;
     width: 0;
 }
+.checkmark{
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    outline: black 1px solid;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.recipe input:checked ~ .checkmark {
+    background-color: rgb(0, 0, 0);
+}
+.recipe input:checked ~ span {
+    text-decoration: line-through;
+}
 .checkbox-list{
     list-style-type: none;    
+
 }
-img{
-    display: block;
+#steps-container{
     height: 200px;
-    width: 420px;
-
+    width: 90%;
+    margin-left: 4%;
+    /* font-size: 20px; */
+    padding-top: 10px;
 }
-svg {
-    border-style: none;
-    font-size: 250%;
-}
-br{
-    display: block;
-    content: "";
-    margin-top:4px;
-}
-
