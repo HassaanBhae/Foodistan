@@ -1,4 +1,4 @@
-
+/* FOR PCCCS */
 @media screen and (min-width: 960px) {
     #nav-bar{
         font-size: 16px;
@@ -20,21 +20,28 @@
         top: 600px;
     }
     #ingredients-container{
-        font-size: 18px;
+        font-size: 20px;
+        height: 450px;
+        width: 30%;
     }
     #steps-container{
         font-size: 20px;
+        height: 450px;
+        transition: all 1s;
+        transform: translateY(0px);
+        width: 60%;
+    }
+    .checkmark{
+        margin-top: 3px;
     }
 }
+/* FOR TABLETS */
 @media screen and (max-width: 960px) {
     #nav-bar{
         font-size: 14px;
     }
     .nav-button{
         visibility: hidden;
-    }
-    .trending-pic{
-        height: 500px;
     }
     div.trending-pic{
         height: 450px;
@@ -50,12 +57,23 @@
         top: 600px;
     }
     #ingredients-container{
-        font-size: 18px;
+        font-size: 16px;
+        height: 450px;
+        width: 30%;
+        transition: all 1s;
     }
     #steps-container{
-        font-size: 20px;
+        font-size: 16px;
+        height: 450px;
+        transition: all 1s;
+        transform: translateY(0px);
+        width: 60%;
+    }
+    .checkmark{
+        margin-top: 3px;
     }
 }
+/* FOR PHONES */
 @media screen and (max-width: 768px) {
     #nav-bar{
         visibility: hidden;
@@ -63,30 +81,44 @@
     .nav-button{
         visibility: visible;
     }
-    .trending-pic{
-        height: calc(60vh);
-    }
     .trend-head-p{
         font-size: 14px;
     }
     div.trending-pic{
         height: 350px;
+        /* width: 100%; */
     }
     div.trending-pic img{
         left: -10%;
         transform: scale(1.2);
+        /* width: 100%; */
     }
     div.trending-pic-text{
         height: 350px;
+    }
+    .container{
+        /* height: 1100px; */
+        height: calc(100vh);
     }
     .recipe{
         top: 500px;
     }
     #ingredients-container{
         font-size: 16px;
+        height: 350px;
+        transition: all 1s;
+        transform: translateX(30%);
+        width: 60%;
     }
     #steps-container{
         font-size: 18px;
+        height: 350px;
+        transition: all 1s;
+        transform: translate(-3%,380px);
+        width: 90%;
+    }
+    .checkmark{
+        margin-top: 0px;
     }
 }
 @media (hover: hover) {
@@ -97,11 +129,11 @@
 
 @font-face {
     font-family: "Orpheus-italic";
-    src: url("./fonts/orpheuspro-italic.otf");
+    src: url("..s/fonts/orpheuspro-italic.otf");
 }
 @font-face {
     font-family: "domaine-text";
-    src: url("./fonts/domaine-text.otf");
+    src: url("../fonts/domaine-text.otf");
 }
 
 ::-webkit-scrollbar {
@@ -122,17 +154,22 @@ html{
 }
 body{
     margin: 0%;
-    /* padding-bottom: 20%; */
+    padding: 0%;
+}
+#logo{
+    display: block;
+    text-decoration: none;
+    color: #000000;
+    position:relative;
+    width: 180px;
 }
 #logo h1{
     font-family:"domaine-text";
     border:0;
     margin-left:20px;
     margin-top: 0;
-    width: 35%;
     font-weight: lighter;
-    z-index: 100;
-    position:sticky;
+    width: 180px;
 }
 div.mainheader{
     background-color: white;
@@ -187,7 +224,8 @@ div.mainheader{
     height: 30px;
     width: 30px;
     border-radius: 10%; 
-    transition: 600ms; 
+    transition-property:height;
+    transition-duration: 600ms; 
     right: 140%;
     margin-right: calc(5vw);
 }
@@ -278,10 +316,9 @@ div.mainheader{
 
 /* MAIN PICCCCCCCC */
 .container{
-    /* position: relative; */
+    margin-top: 10px;
     width: calc(100vw);
-    height: 1100px;
-    /* background-color: saddlebrown; */
+    height: calc(150vh);
 }
 
 
@@ -312,8 +349,8 @@ div.trending-pic img{
     /* transform: scale(1.5); */
 }
 div.trending-pic-text{
-    border-bottom-style: groove;
-    border-width: 2px;
+    /* border-bottom-style: groove; */
+    /* border-width: 2px; */
     width: 30%;
     min-width: 165px;
     margin: 0%;
@@ -325,6 +362,7 @@ div.trending-pic-text{
     margin-right: 2%;
     text-align: start;
     border: #000000 2px solid;
+    
 }
 div.trending-pic-text ul{
     list-style-type: none;
@@ -376,35 +414,43 @@ li{
 }
 .recipe{
     position: absolute ;
-    background-color:#e5e5ea;
-    padding-bottom: 50px;
-    border: 2px black solid;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     /* margin: 200px; */
     /* box-shadow: -7px 8px 0px -2px,-7px 8px 0px -2px inset; */
-    height: 600px;
-    width: 80%;
-    left: 10%;
+    /* height: auto; */
+    width: 100%;
+    /* left: 10%; */
     /* top: 500px; */
     /* top: 500px; */
+    
 }
-#ingredients{
+.ingredients{
     position: relative; 
     text-align: center;
-    font-weight: 600;
-    top: 10px;
+    font-weight: 100;
+    margin-top: 10px;
+    
 }
 #ingredients-container{
-    height: 200px;
-    width: 90%;
-    margin-left: 5%;
-    /* font-size: 18px; */
-    padding-top: 10px;
+    z-index: 2;
+    position: absolute;
+    background-color:#e5e5ea;
+    border: 4px  #73737b solid;
+    /* outline: 3px #dcdce1 solid; */
+    min-width: 165px;
+    left: 2%;
+    /* left: 0px; */
+    /* padding-bottom: 20px; */
+    border: #000000 2px solid;
 }
+
 #ingredients-container label{
     display: flex;
     justify-content: flex-start;
     cursor: pointer;
+    margin-bottom: 10px;
+    margin-left: 30px;
+    /* text-wrap: nowrap; */
 }
 .recipe input{
     position: relative;
@@ -412,13 +458,20 @@ li{
     width: 0;
 }
 .checkmark{
+    position: absolute;
     cursor: pointer;
-    width: 20px;
-    height: 20px;
-    outline: black 1px solid;
-    margin-right: 10px;
-    margin-bottom: 10px;
+    border-radius: 50%;
+    width: 11px;
+    height: 11px;
+    border-width: 3px;
+    border-color: #ffffff;
+    border-style: solid;
+    outline: rgb(0, 0, 0) 2px solid;
+    background-color: #ffffff;
+    margin-left: -20px;
+    /* margin-bottom: 10px; */
 }
+
 .recipe input:checked ~ .checkmark {
     background-color: rgb(0, 0, 0);
 }
@@ -430,9 +483,12 @@ li{
 
 }
 #steps-container{
-    height: 200px;
-    width: 90%;
-    margin-left: 4%;
-    /* font-size: 20px; */
-    padding-top: 10px;
+    position: absolute;
+    background-color:#e5e5ea;
+    /* border: 4px  #73737b solid; */
+    /* outline: 3px #a6a6a8 solid; */
+    /* margin-right: 5%; */
+    right: 2%;
+    border: #000000 2px solid;
+    transition: all 1s;
 }

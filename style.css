@@ -187,15 +187,20 @@ body{
     margin: 0%;
     padding: 0%;
 }
+#logo{
+    display: block;
+    text-decoration: none;
+    color: #000000;
+    position:sticky;
+    width: 180px;
+}
 #logo h1{
     font-family:"domaine-text";
     border:0;
     margin-left:20px;
     margin-top: 0;
-    width: 35%;
     font-weight: lighter;
-    z-index: 100;
-    position:sticky;
+    width: 160px;
 }
 div.mainheader{
     background-color: white;
@@ -250,13 +255,11 @@ div.mainheader{
     height: 30px;
     width: 30px;
     border-radius: 10%; 
-    transition: 600ms; 
+    transition-property:height;
+    transition-duration: 600ms; 
     right: 140%;
     margin-right: calc(5vw);
 }
-/* .nav-button:hover{
-    background-color: #e5e5ea;
-} */
 
 #nav-menu input:checked ~ .nav-button{
     background-color: #e5e5ea;
