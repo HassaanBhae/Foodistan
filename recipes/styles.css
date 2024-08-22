@@ -155,6 +155,9 @@ html{
 body{
     margin: 0%;
     padding: 0%;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+     user-select: none; /* Standard syntax */
 }
 #logo{
     display: block;
@@ -402,7 +405,7 @@ li{
     background-color: darkred;
 }
 .desi{
-    background-color: rgb(193, 154, 107);
+    background-color: #5C4033;
 }
 .german{
     background-color: red;
