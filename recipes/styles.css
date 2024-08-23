@@ -7,14 +7,24 @@
         visibility: hidden;
     }
     .trending-pic{
-        height: 450px;
+        height: 450px;        
+        border-right-style: solid;
+        border-top-style: solid;
+        border-bottom-style: solid;
+        border-left-style: solid;
+        border-width: 2px;
     }
-    div.trending-pic img{
+    .trending-pic img{
         left: -100px;
         transform: scale(1.4);
     }
-    div.trending-pic-text{
+    .trending-pic-text{
         height: 450px;
+        width: 30%;
+        right: 0px;
+        margin-right: 2%;
+        box-shadow: -7px 8px 0px -2px;
+        border-width: 2px;
     }
     .recipe{
         top: 600px;
@@ -23,6 +33,7 @@
         font-size: 20px;
         height: 450px;
         width: 30%;
+        left: 2%;
     }
     #steps-container{
         font-size: 20px;
@@ -30,28 +41,39 @@
         transition: all 1s;
         transform: translateY(0px);
         width: 60%;
+        right: 2%;
     }
     .checkmark{
         margin-top: 3px;
     }
 }
 /* FOR TABLETS */
-@media screen and (max-width: 960px) {
+@media screen and (min-width: 768px) {
     #nav-bar{
         font-size: 14px;
     }
     .nav-button{
         visibility: hidden;
     }
-    div.trending-pic{
+    .trending-pic{
         height: 450px;
+        border-right-style: solid;
+        border-top-style: solid;
+        border-bottom-style: solid;
+        border-left-style: solid;
+        border-width: 2px;
     }
-    div.trending-pic img{
+    .trending-pic img{
         left: -100px;
         transform: scale(1.5);
     }
-    div.trending-pic-text{
+    .trending-pic-text{
         height: 450px;
+        width: 30%;
+        right: 0px;
+        margin-right: 2%;
+        box-shadow: -7px 8px 0px -2px;
+        border-width: 2px;
     }
     .recipe{
         top: 600px;
@@ -61,6 +83,7 @@
         height: 450px;
         width: 30%;
         transition: all 1s;
+        left: 2%;
     }
     #steps-container{
         font-size: 16px;
@@ -68,6 +91,7 @@
         transition: all 1s;
         transform: translateY(0px);
         width: 60%;
+        right: 2%;
     }
     .checkmark{
         margin-top: 3px;
@@ -86,39 +110,53 @@
     }
     div.trending-pic{
         height: 350px;
-        /* width: 100%; */
+        width: 100%;
+        left: 0%;
+        border-right-style: none;
+        border-top-style: none;
+        border-bottom-style: none;
+        border-left-style: none;
+        border-width: 2px;
     }
-    div.trending-pic img{
-        left: -10%;
-        transform: scale(1.2);
-        /* width: 100%; */
-    }
-    div.trending-pic-text{
-        height: 350px;
+    .trending-pic img{
+        left: -12%;
+        transform: scale(1.3);
     }
     .container{
-        /* height: 1100px; */
         height: calc(100vh);
     }
     .recipe{
         top: 500px;
+        position: relative;
+        height: 950px;
+    }
+    .trending-pic-text{
+        transform-origin:all 1s;
+        top:472px;
+        width: 100%;
+        height: 160px;
+        border-width: 0px;
+        box-shadow: 0px 0px 0px 0px;
     }
     #ingredients-container{
         font-size: 16px;
-        height: 350px;
+        height: auto;
         transition: all 1s;
-        transform: translateX(30%);
-        width: 60%;
+        transform: translateY(150px);
+        left: 15%;
+        position: absolute;
+        width: 70%;
     }
     #steps-container{
         font-size: 18px;
-        height: 350px;
+        height: auto;
         transition: all 1s;
-        transform: translate(-3%,380px);
-        width: 90%;
+        transform: translateY(540px);
+        width: 70%;
+        margin-left: 15%;
     }
     .checkmark{
-        margin-top: 0px;
+        margin-top: 2px;
     }
 }
 @media (hover: hover) {
@@ -320,54 +358,40 @@ div.mainheader{
 /* MAIN PICCCCCCCC */
 .container{
     margin-top: 10px;
-    width: calc(100vw);
+    /* width: calc(100vw); */
     height: calc(150vh);
 }
 
 
-div.trending-pic{
+.trending-pic{
     width: 60%;
     margin: 0%;
     padding: 0%;
     overflow: hidden;
     position: absolute;
-    /* height: 450px; */
     left: 2%;
     margin-right: 200px;
-    /* border-top-right-radius: 3%; */
-    /* border-bottom-right-radius: 3%; */
-    border: solid;
-    /* border-bottom: solid; */
-    /* border-top: solid; */
-    border-width: 2px;
-    /* border-color: #F5F5F8; */
 }
 
-div.trending-pic img{
+.trending-pic img{
     height: 100%;
     width: 100%;
-    /* left: -100px; */
     position: absolute;
     object-fit: cover;
-    /* transform: scale(1.5); */
 }
-div.trending-pic-text{
-    /* border-bottom-style: groove; */
-    /* border-width: 2px; */
-    width: 30%;
-    min-width: 165px;
-    margin: 0%;
+.trending-pic-text{
     padding-bottom: 0%;
     color: rgb(0, 0, 0);
     background-color: #F5F5F8; 
     position: absolute;
-    right: 0px;
-    margin-right: 2%;
     text-align: start;
-    border: #000000 2px solid;
-    
+    transition: all 1s;
+    border-bottom-style: groove;
+    color: rgb(0, 0, 0);
+    background-color: #F5F5F8; 
+    text-align: start;
 }
-div.trending-pic-text ul{
+.trending-pic-text ul{
     list-style-type: none;
     padding-inline-start: 10px;
 }
@@ -417,34 +441,27 @@ li{
 }
 .recipe{
     position: absolute ;
-    /* border-radius: 10px; */
-    /* margin: 200px; */
-    /* box-shadow: -7px 8px 0px -2px,-7px 8px 0px -2px inset; */
-    /* height: auto; */
     width: 100%;
-    /* left: 10%; */
-    /* top: 500px; */
-    /* top: 500px; */
     
 }
 .ingredients{
     position: relative; 
     text-align: center;
     font-weight: 100;
-    margin-top: 10px;
+    margin: 10px;
+    font-size: 24px;
     
 }
 #ingredients-container{
     z-index: 2;
     position: absolute;
-    background-color:#e5e5ea;
-    border: 4px  #73737b solid;
-    /* outline: 3px #dcdce1 solid; */
-    min-width: 165px;
-    left: 2%;
-    /* left: 0px; */
-    /* padding-bottom: 20px; */
-    border: #000000 2px solid;
+    transition: all 1s;
+    border-bottom-style: groove;
+    border-width: 2px;
+    color: rgb(0, 0, 0);
+    background-color: #F5F5F8; 
+    text-align: start;
+    box-shadow: -7px 8px 0px -2px;
 }
 
 #ingredients-container label{
@@ -486,12 +503,12 @@ li{
 
 }
 #steps-container{
-    position: absolute;
-    background-color:#e5e5ea;
-    /* border: 4px  #73737b solid; */
-    /* outline: 3px #a6a6a8 solid; */
-    /* margin-right: 5%; */
-    right: 2%;
-    border: #000000 2px solid;
     transition: all 1s;
+    border-bottom-style: groove;
+    border-width: 2px;
+    color: rgb(0, 0, 0);
+    background-color: #F5F5F8; 
+    position: absolute;
+    text-align: start;
+    box-shadow: -7px 8px 0px -2px;
 }
