@@ -26,6 +26,9 @@
         box-shadow: -7px 8px 0px -2px;
         border-width: 2px;
     }
+    .trend-head-tag{
+        margin-left: 5px;
+    }
     .recipe{
         top: 600px;
     }
@@ -48,7 +51,7 @@
     }
 }
 /* FOR TABLETS */
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 960px) {
     #nav-bar{
         font-size: 14px;
     }
@@ -74,6 +77,9 @@
         margin-right: 2%;
         box-shadow: -7px 8px 0px -2px;
         border-width: 2px;
+    }
+    .trend-head-tag{
+        margin-left: 5px;
     }
     .recipe{
         top: 600px;
@@ -106,7 +112,8 @@
         visibility: visible;
     }
     .trend-head-p{
-        font-size: 14px;
+        /* font-size: 15px; */
+        top: -40px;
     }
     div.trending-pic{
         height: 350px;
@@ -117,6 +124,12 @@
         border-bottom-style: none;
         border-left-style: none;
         border-width: 2px;
+    }
+    .trend-head-tag{
+        margin-left: 210px;
+    }
+    #tag-id{
+        transform: translateY(-40px);
     }
     .trending-pic img{
         left: -12%;
@@ -134,9 +147,11 @@
         transform-origin:all 1s;
         top:472px;
         width: 100%;
-        height: 160px;
+        height: 120px;
         border-width: 0px;
         box-shadow: 0px 0px 0px 0px;
+        margin-right: 0%;
+        overflow: hidden;
     }
     #ingredients-container{
         font-size: 16px;
@@ -153,7 +168,7 @@
         transition: all 1s;
         transform: translateY(540px);
         width: 70%;
-        margin-left: 15%;
+        left: 15%;
     }
     .checkmark{
         margin-top: 2px;
@@ -413,11 +428,10 @@ li{
     color: rgb(255, 255, 255);
     font-size: 20px;
     margin-top: 5px;
-    margin-left: 5px;
     padding-left: 5px;
     padding-right: 5px;
     padding-top: 2px;
-    padding-bottom: 2px;        
+    padding-bottom: 2px;    
 }
 .mexican{
     background-color: orange;
@@ -438,6 +452,13 @@ li{
     margin-bottom: 10px;
     padding-left: 5px;
     padding-right: 5px;
+    position: relative;
+}
+.trend-head-pp{
+    margin-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    position: relative;
 }
 .recipe{
     position: absolute ;
