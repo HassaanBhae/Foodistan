@@ -195,6 +195,7 @@ body{
     color: #000000;
     position:sticky;
     width: 180px;
+    z-index: 1000;
 }
 #logo h1{
     font-family:"domaine-text";
