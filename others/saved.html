@@ -1,62 +1,8 @@
-/* FOR PCCCS */
-@media screen and (min-width: 960px) {
-    #nav-bar{
-        font-size: 16px;
-    }
-    .nav-button{
-        visibility: hidden;
-    }
-    .container{
-        height: 950px;
-    }
-    #trend-head{
-        font-size: 24px;
-    }
-    .trending-pic{
-        height: 450px;        
-        border-right-style: solid;
-        border-top-style: solid;
-        border-bottom-style: solid;
-        border-left-style: solid;
-        border-width: 2px;
-    }
-    .trending-pic img{
-        left: -100px;
-        transform: scale(1.4);
-    }
-    .trending-pic-text{
-        height: 450px;
-        width: 30%;
-        right: 0px;
-        margin-right: 2%;
-        box-shadow: -7px 8px 0px -2px;
-        border-width: 2px;
-    }
-    .trend-head-tag{
-        margin-left: 5px;
-    }
-    .recipe{
-        top: 600px;
-    }
-    #ingredients-container{
-        font-size: 20px;
-        height: 450px;
-        width: 30%;
-        left: 2%;
-    }
-    #steps-container{
-        font-size: 20px;
-        height: 450px;
-        transition: all 1s;
-        transform: translateY(0px);
-        width: 60%;
-        right: 2%;
-    }
-    .checkmark{
-        margin-top: 3px;
-    }
-}
-/* FOR TABLETS */
+<!DOCTYPE html>
+<html>
+<style>
+
+  /* FOR TABLETS */
 @media screen and (max-width: 960px) {
     #nav-bar{
         font-size: 14px;
@@ -243,6 +189,7 @@ body{
     color: #000000;
     position:relative;
     width: 180px;
+    z-index: 100000;
 }
 #logo h1{
     font-family:"domaine-text";
@@ -396,172 +343,84 @@ div.mainheader{
 
 
 /* MAIN PICCCCCCCC */
-.container{
-    margin-top: 10px;
+
+body, html {
+  height: 100%;
+  margin: 0;
 }
 
-
-.trending-pic{
-    width: 60%;
-    margin: 0%;
-    padding: 0%;
-    overflow: hidden;
-    position: absolute;
-    left: 2%;
-    margin-right: 200px;
+.bgimg {
+  height: 80%;
+  position: relative;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 25px;
 }
 
-.trending-pic img{
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    object-fit: cover;
-}
-.trending-pic-text{
-    padding-bottom: 0%;
-    color: rgb(0, 0, 0);
-    background-color: #F5F5F8; 
-    position: absolute;
-    text-align: start;
-    transition: all 1s;
-    border-bottom-style: groove;
-    color: rgb(0, 0, 0);
-    background-color: #F5F5F8; 
-    text-align: start;
-}
-.trending-pic-text ul{
-    list-style-type: none;
-    padding-inline-start: 10px;
-}
-li{
-    padding-bottom:5px ;
-}
-#trend-head{
-    padding-left: 5px;
-    font-weight: normal;
-    padding-right: 5px;
-    margin-bottom: 10px;
-    color: rgb(0, 0, 0);
-}
-.trend-head-tag{
-    color: rgb(255, 255, 255);
-    font-size: 20px;
-    margin-top: 5px;
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-top: 2px;
-    padding-bottom: 2px;    
-}
-.mexican{
-    background-color: orange;
-}
-.italian{
-    background-color: green;
-}
-.japanese{
-    background-color: darkred;
-}
-.desi{
-    background-color: #5C4033;
-}
-.german{
-    background-color: red;
-}
-.trend-head-p{
-    margin-bottom: 10px;
-    padding-left: 5px;
-    padding-right: 5px;
-    position: relative;
-}
-.trend-head-pp{
-    margin-bottom: 10px;
-    padding-left: 5px;
-    padding-right: 5px;
-    position: relative;
-}
-.recipe{
-    position: absolute ;
-    width: 100%;
-    
-}
-.ingredients{
-    position: relative; 
-    text-align: center;
-    font-weight: 100;
-    margin: 10px;
-    font-size: 24px;
-    
-}
-#ingredients-container{
-    z-index: 2;
-    position: absolute;
-    transition: all 1s;
-    border-bottom-style: groove;
-    border-width: 2px;
-    color: rgb(0, 0, 0);
-    background-color: #F5F5F8; 
-    text-align: start;
-    box-shadow: -7px 8px 0px -2px;
+.topleft {
+  position: absolute;
+  top: 0;
+  left: 16px;
 }
 
-#ingredients-container label{
-    display: flex;
-    justify-content: flex-start;
-    cursor: pointer;
-    margin-bottom: 10px;
-    margin-left: 30px;
-    /* text-wrap: nowrap; */
-}
-.recipe input{
-    position: relative;
-    height: 0;
-    width: 0;
-}
-.checkmark{
-    position: absolute;
-    cursor: pointer;
-    border-radius: 50%;
-    width: 11px;
-    height: 11px;
-    border-width: 3px;
-    border-color: #ffffff;
-    border-style: solid;
-    outline: rgb(0, 0, 0) 2px solid;
-    background-color: #ffffff;
-    margin-left: -20px;
-    /* margin-bottom: 10px; */
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 16px;
 }
 
-.recipe input:checked ~ .checkmark {
-    background-color: rgb(0, 0, 0);
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
-.recipe input:checked ~ span {
-    text-decoration: line-through;
-}
-.checkbox-list{
-    list-style-type: none;    
 
+hr {
+  margin: auto;
+  width: 40%;
 }
-#steps-container{
-    transition: all 1s;
-    border-bottom-style: groove;
-    border-width: 2px;
-    color: rgb(0, 0, 0);
-    background-color: #F5F5F8; 
-    position: absolute;
-    text-align: start;
-    box-shadow: -7px 8px 0px -2px;
-}
-hr{
-    width: 90%;
-    border-width: 0px;
-    background-color: black;
-    height:2px;
-}
-footer{
-    text-align: center;
-    font-family: sans-serif;
-    font-size: small;
-    font-weight: 700;
-    color: rgb(80, 76, 76);
-}
+</style>
+<body>
+    <div class="mainheader">
+        <div><a href="../index.html" id="logo"><h1>Foodistan</h1></a></div>
+        <label id="nav-menu">
+            <input type="checkbox">
+            <div class="nav-button">
+                <div class="line" id="firstline"></div>
+                <div class="line" id="middleline"></div>
+                <div class="line" id="lastline"></div>
+            </div>
+            <div class="dropdown-content">
+                <a href="../index.html">H O M E</a>
+                <a href="./about.html">A B O U T</a>
+                <a href="../index.html#for-all-recipe-button">R E C I P E S</a>
+                <a href="#top">S A V E D</a>
+            </div>
+        </label>
+        <div id="nav-bar">
+            <a href="../index.html">H O M E</a>
+            <a href="./about.html">A B O U T</a>
+            <a href="../index.html#for-all-recipe-button">R E C I P E S</a>
+            <a href="#top">S A V E D</a>
+        </div>
+
+        <div><svg id="search-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                <path fill="currentColor" d="m19.485 20.154l-6.262-6.262q-.75.639-1.725.989t-1.96.35q-2.402 0-4.066-1.663T3.808 9.503T5.47 5.436t4.064-1.667t4.068 1.664T15.268 9.5q0 1.042-.369 2.017t-.97 1.668l6.262 6.261zM9.539 14.23q1.99 0 3.36-1.37t1.37-3.361t-1.37-3.36t-3.36-1.37t-3.361 1.37t-1.37 3.36t1.37 3.36t3.36 1.37" />
+            </svg> 
+            <input id="search-bar" type="search" placeholder="S E A R C H">
+        </div>
+    </div>
+<div class="bgimg">
+  <div class="middle">
+    <h1>COMING SOON</h1>
+    <hr>
+    <p>10 days left(HopeFully)</p>
+  </div>
+  <div class="bottomleft">
+    <p>Working on it!</p>
+  </div>
+</div>
+
+</body>
+</html>

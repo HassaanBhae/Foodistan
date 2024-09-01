@@ -564,4 +564,17 @@ br{
     content: "";
     margin-top:4px;
 }
+hr{
+    width: 90%;
+    border-width: 0px;
+    background-color: black;
+    height:2px;
+}
+footer{
+    text-align: center;
+    font-family: sans-serif;
+    font-size: small;
+    font-weight: 700;
+    color: rgb(80, 76, 76);
+}
 
