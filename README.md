@@ -1,4 +1,4 @@
-# Odin-Recipes
+# Recipes Web
 
 
-Making A demo Recipes Web
+Making A Recipes Web
