@@ -1,64 +1,22 @@
 <!DOCTYPE html>
 <html>
 <style>
-
-  /* FOR TABLETS */
+/* FOR PCCCS */
+@media screen and (min-width: 960px) {
+    #nav-bar{
+        font-size: 16px;
+    }
+    .nav-button{
+        visibility: hidden;
+    }
+}
+/* FOR TABLETS */
 @media screen and (max-width: 960px) {
     #nav-bar{
         font-size: 14px;
     }
     .nav-button{
         visibility: hidden;
-    }
-    .container{
-        height: 950px;
-    }
-    #trend-head{
-        font-size: 24px;
-    }
-    .trending-pic{
-        height: 450px;
-        border-right-style: solid;
-        border-top-style: solid;
-        border-bottom-style: solid;
-        border-left-style: solid;
-        border-width: 2px;
-    }
-    .trending-pic img{
-        left: -100px;
-        transform: scale(1.5);
-    }
-    .trending-pic-text{
-        height: 450px;
-        width: 30%;
-        right: 0px;
-        margin-right: 2%;
-        box-shadow: -7px 8px 0px -2px;
-        border-width: 2px;
-    }
-    .trend-head-tag{
-        margin-left: 5px;
-    }
-    .recipe{
-        top: 600px;
-    }
-    #ingredients-container{
-        font-size: 16px;
-        height: 450px;
-        width: 30%;
-        transition: all 1s;
-        left: 2%;
-    }
-    #steps-container{
-        font-size: 16px;
-        height: 450px;
-        transition: all 1s;
-        transform: translateY(0px);
-        width: 60%;
-        right: 2%;
-    }
-    .checkmark{
-        margin-top: 3px;
     }
 }
 /* FOR PHONES */
@@ -69,82 +27,8 @@
     .nav-button{
         visibility: visible;
     }
-    #trend-head{
-        font-size: 24px;
-    }
-    .trend-head-p{
-        top: -40px;
-    }
-    div.trending-pic{
-        height: 350px;
-        width: 100%;
-        left: 0%;
-        border-right-style: none;
-        border-top-style: none;
-        border-bottom-style: none;
-        border-left-style: none;
-        border-width: 2px;
-    }
-    .trend-head-tag{
-        margin-left: 210px;
-    }
-    #tag-id{
-        transform: translateY(-40px);
-    }
-    .trending-pic img{
-        left: -12%;
-        transform: scale(1.3);
-    }
-    .container{
-        height: 1200px;
-    }
-    .recipe{
-        top: 500px;
-    }
-    .trending-pic-text{
-        transform-origin:all 1s;
-        top:472px;
-        width: 100%;
-        height: 120px;
-        border-width: 0px;
-        box-shadow: 0px 0px 0px 0px;
-        margin-right: 0%;
-        overflow: hidden;
-    }
-    #ingredients-container{
-        font-size: 16px;
-        height: auto;
-        transition: all 1s;
-        transform: translateY(150px);
-        left: 15%;
-        position: absolute;
-        width: 70%;
-    }
-    #steps-container{
-        font-size: 18px;
-        height: auto;
-        transition: all 1s;
-        transform: translateY(540px);
-        width: 70%;
-        left: 15%;
-    }
-    .checkmark{
-        margin-top: 2px;
-    }
 }
-@media screen and (max-width: 500px) {
-    .container{
-        height: 1400px;
-    }
-}
-@media screen and (max-width: 366px) {
-    #trend-head{
-        font-size: 21px;
-    }
-    .trend-head-p{
-        font-size: 14px;
-    }
-}
+
 @media (hover: hover) {
     .nav-button:hover{
         background-color: #e5e5ea;
@@ -181,7 +65,7 @@ body{
     padding: 0%;
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
-     user-select: none; /* Standard syntax */
+        user-select: none; /* Standard syntax */
 }
 #logo{
     display: block;
@@ -252,8 +136,8 @@ div.mainheader{
     height: 30px;
     width: 30px;
     border-radius: 10%; 
-    transition-property:height;
-    transition-duration: 600ms; 
+    /* transition-property:all;
+    transition-duration: 600ms;  */
     right: 140%;
     margin-right: calc(5vw);
 }
@@ -345,40 +229,40 @@ div.mainheader{
 /* MAIN PICCCCCCCC */
 
 body, html {
-  height: 100%;
-  margin: 0;
+    height: 100%;
+    margin: 0;
 }
 
 .bgimg {
-  height: 80%;
-  position: relative;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 25px;
+    height: 80%;
+    position: relative;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 25px;
 }
 
 .topleft {
-  position: absolute;
-  top: 0;
-  left: 16px;
+    position: absolute;
+    top: 0;
+    left: 16px;
 }
 
 .bottomleft {
-  position: absolute;
-  bottom: 0;
-  left: 16px;
+    position: absolute;
+    bottom: 0;
+    left: 16px;
 }
 
 .middle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 hr {
-  margin: auto;
-  width: 40%;
+    margin: auto;
+    width: 40%;
 }
 </style>
 <body>
