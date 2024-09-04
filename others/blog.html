@@ -12,6 +12,9 @@
     .box{
         height: 500px;
     }
+    .box-text{
+        height: 500px;
+    }
     .text-head{
         font-size: 24px;
     }
@@ -30,6 +33,9 @@
     .box{
         height: 500px;
     }
+    .box-text{
+        height: 500px;
+    }
     .text-head{
         font-size: 24px;
     }
@@ -46,6 +52,9 @@
         visibility: visible;
     }
     .box{
+        height: 400px;
+    }
+    .box-text{
         height: 400px;
     }
     .text-head{
@@ -252,6 +261,11 @@ div.mainheader{
 
 
 /* MAIN Container */
+.head{
+    text-align: center;
+    font-weight: 100;
+    font-size: 28px;
+}
 .main{
     display: flex;
     flex-wrap: wrap;
@@ -260,13 +274,29 @@ div.mainheader{
     padding-bottom: 20px;
 }
 .box{
-    width: 100%;
-    background-color: #F5F5F8;
+    width: 90%;
     display: flex;
+}
+.pos-left{
+    justify-content: flex-start;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-right-style: solid;
+    border-width: 2px;
+    border-color: #000000;
+}
+.pos-right{
+    justify-content: flex-end;
+    margin-left: 10%;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-width: 2px;
+    border-color: #000000;
 }
 .box-pic{
     position: relative;
-    width: 60%;
+    width: 50%;
     height: 100%;
     margin: 0%;
     padding: 0%;
@@ -277,6 +307,7 @@ div.mainheader{
 }
 .box-right{
     order: 2;
+
 }
 .box img{
     height: 100%;
@@ -287,21 +318,20 @@ div.mainheader{
     /* top: 100px; */
 }
 .box-text{
-    height: 500px;
-    width: 40%;
+    width: 50%;
     /* display: flex; */
     /* flex-wrap: wrap; */
     overflow: hidden;
-    /* box-shadow: -7px 8px 0px -2px inset; */
-    /* z-index: 100; */
-
+    /* background-color: #F5F5F8; */
+    /* border-left:rgb(37, 178, 37) 10px solid ; */
 }
 .text-head{
-    /* text-align: center; */
+    text-align: center;
     font-weight: 100;
-    margin-left: 8%;
+    /* margin-left: 8%; */
     margin-top: 10px;
     margin-bottom: 0px;
+    
     /* font-size: 20px; */
 }
 .text-para{
@@ -361,47 +391,48 @@ hr{
             <input id="search-bar" type="search" placeholder="S E A R C H">
         </div>
     </div>
+    <h1 class="head">Featured Blogs!</h1>
 <div class="main">
-    <div class="box">
+    <div class="box pos-left">
         <div class="box-pic box-left"><img src="../images/biryani.jpg"></div>
         <div class="box-text box-right">
             <h2 class="text-head">Making Biryani For The First Time:</h2>
             <p class="text-para">Making biryani for the first time can be a challenge, with its layers of marinated meat and fragrant spices. The process might be tough, but the rich, complex flavors that emerge are incredibly rewarding. Each bite of your homemade biryani makes the effort worth it, turning a difficult cooking experience into a delicious triumph.</p>
         </div>
     </div>
-    <div class="box">
+    <div class="box pos-right">
         <div class="box-pic box-right"><img src="../images/tacos.jpg"></div>
         <div class="box-text box-left">
             <h2 class="text-head">Favourite Late Breakfast Recipe:</h2>
-            <p class="text-para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa, repellat autem culpa, veritatis voluptatem obcaecati esse cumque corrupti a blanditiis quis in neque eveniet id unde fuga optio beatae illum.</p>
+            <p class="text-para">When the midnight munchies strike, tacos are the perfect late-night snack. Their versatility allows you to whip up a satisfying bite with whatever you have on hand, whether it’s a classic beef taco or a creative breakfast version with eggs and bacon. With their crisp shells and flavor-packed fillings, tacos offer a quick, delicious solution to your cravings, proving that they’re not just for daytime dining.</p>
         </div>
     </div>
-    <div class="box">
+    <div class="box pos-left">
         <div class="box-pic box-left"><img src="../images/burger.jpg"></div>
         <div class="box-text box-right">
             <h2 class="text-head">Wanting A Big Bad Burger:</h2>
-            <p class="text-para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa, repellat autem culpa, veritatis voluptatem obcaecati esse cumque corrupti a blanditiis quis in neque eveniet id unde fuga optio beatae illum.</p>
+            <p class="text-para">When you’re really hungry and need a meal that hits the spot, a beef burger is hard to beat. Its juicy patty, hearty toppings, and satisfying bun create a perfect combination of flavors and textures that can tackle even the deepest hunger. Whether you prefer it with classic lettuce and tomato or loaded with extras like cheese, a well-made beef burger offers a delicious and fulfilling solution to your appetite.</p>
         </div>
     </div>
-    <div class="box">
+    <div class="box pos-right">
         <div class="box-pic box-right"><img src="../images/pasta.jpg"></div>
         <div class="box-text box-left">
             <h2 class="text-head">Trying Creamy Pasta Recipe For The First Time:</h2>
-            <p class="text-para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa, repellat autem culpa, veritatis voluptatem obcaecati esse cumque corrupti a blanditiis quis in neque eveniet id unde fuga optio beatae illum.</p>
+            <p class="text-para">Trying creamy steak pasta for the first time is a delightful culinary adventure. This dish combines tender, juicy steak with a rich, creamy sauce and perfectly cooked pasta, creating a satisfying and indulgent meal. The steak adds a hearty, savory element, while the creamy sauce envelops the pasta in a luscious, comforting embrace. Creamy steak pasta is a delicious fusion that’s sure to impress your taste buds.</p>
         </div>
     </div>
-    <div class="box">
+    <div class="box pos-left">
         <div class="box-pic box-left"><img src="../images/pizza.jpeg"></div>
         <div class="box-text box-right">
             <h2 class="text-head">When It's a Movie Night:</h2>
-            <p class="text-para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa, repellat autem culpa, veritatis voluptatem obcaecati esse cumque corrupti a blanditiis quis in neque eveniet id unde fuga optio beatae illum.</p>
+            <p class="text-para">Movie night and pizza are a match made in comfort food heaven. The warmth of a cheesy, melty pizza pairs perfectly with a cozy movie marathon, making it the ultimate choice for a relaxed evening. Whether you opt for a classic pepperoni, a veggie-loaded slice, or something like barbecue chicken, pizza's delicious combination of crispy crust, savory toppings, and gooey cheese adds an extra layer of enjoyment to your film-watching experience.</p>
         </div>
     </div>
-    <div class="box">
+    <div class="box pos-right">
         <div class="box-pic box-right"><img src="../images/lasagna.jpeg"></div>
         <div class="box-text box-left">
             <h2 class="text-head">Having A Party Or Friends Coming Over:</h2>
-            <p class="text-para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa, repellat autem culpa, veritatis voluptatem obcaecati esse cumque corrupti a blanditiis quis in neque eveniet id unde fuga optio beatae illum.</p>
+            <p class="text-para">Lasagna is the perfect dish when friends come over, offering a hearty and comforting meal that’s sure to please a crowd. Its layers of rich meat sauce, creamy béchamel, and gooey cheese create a savory, satisfying feast that’s easy to serve and even easier to enjoy. Whether you make it with classic beef or a veggie twist, lasagna’s indulgent flavors and satisfying texture make it an ideal choice for a casual get-together, ensuring your friends leave with full bellies and happy hearts.</p>
         </div>
     </div>
 </div>
