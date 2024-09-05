@@ -27,6 +27,25 @@
     .nav-button{
         visibility: visible;
     }
+    .container{
+        height: 630px !important;
+    }
+    .form{
+        margin-left: 0% !important;
+        transform: translateX(5%);
+        width: 90% !important;
+    }
+    .upload{
+        transform: translateY(300px);
+        width: 90% !important;
+    }
+    #submit{
+        transform: translate(-100%,310px) !important;
+        width: 100% !important;
+    }
+    #footer{
+        bottom: auto !important;
+    }
 }
 
 @media (hover: hover) {
@@ -65,8 +84,9 @@ body{
     padding: 0%;
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
-        user-select: none; /* Standard syntax */
+    user-select: none; /* Standard syntax */
 }
+
 #logo{
     display: block;
     text-decoration: none;
@@ -232,12 +252,21 @@ body, html {
     height: 100%;
     margin: 0;
 }
+textarea,
+input.text,
+input[type="text"],
+input[type="button"],
+input[type="submit"],
+.input-checkbox,
+select {
+    -webkit-appearance: none;
+    appearance: none;
+}
 #head{
     font-weight: 100;
     text-align: center;
-    /* font-family: d; */
+    font-size: 24px;
 }
-
 .bgimg {
     height: 70%;
     position: relative;
@@ -264,11 +293,6 @@ body, html {
     transform: translate(-50%, -50%);
     text-align: center;
 }
-
-hr {
-    margin: auto;
-    width: 40%;
-}
 .container{
     display: flex;
 }
@@ -277,6 +301,7 @@ hr {
     margin-left: 5%;
     font-size: 18px;
     height: 380px;
+    transition-duration: 1s;
 }
 input[type=text], select {
     width: 100%;
@@ -286,6 +311,14 @@ input[type=text], select {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+}
+input::placeholder{
+    font-size: 14px;
+}
+select{
+    font-size: 16px;
+    padding-top: 11.3px;
+    padding-bottom: 11.3px;
 }
 
 input[type=submit] {
@@ -308,31 +341,34 @@ input[type=submit]:hover {
     display: flex;
     height: 220px;
     width: 45%;
-    /* background-color: #F5F5F8; */
-    border: #000000 dotted 2px;
-    border-radius: 5%;
+    background-color: #F5F5F8;
+    mix-blend-mode: color;
+    border: #000000 dotted 3px;
+    border-radius: 2%;
     right: 5%;
     text-align: center;
     justify-content: center;
     margin-top: 28px;
+    transition-duration: 1s;
 }
 .upload input{
-    /* background-color: red; */
     opacity: 0;
     cursor: pointer;
     width: 100%;
-    border-radius: 5%;
+    border-radius: 2%;
 }
 #submit{
     position: absolute;
-    width: 45%;
-    right: 5%;
-
+    transition-duration: 1s;
+    width: 45.5%;
+    transform: translateX(10%);
 }
 .upload p{
+    font-family: sans-serif;
     position: absolute;
     top: 60%;
     z-index: -100;
+    font-weight: 700;
 }
 .upload svg{
     /* font-size: 38px; */
@@ -342,10 +378,31 @@ input[type=submit]:hover {
     height: 150px;
     width: 150px;
     z-index: -100;
-
 }
-
+footer{
+    position: absolute;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: small;
+    font-weight: 700;
+    color: rgb(80, 76, 76);
+    bottom:0%;
+    width: 100%;
+}
+hr{
+    width: 90%;
+    border-width: 0px;
+    background-color: black;
+    height:2px;
+}
 </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUBMIT | Foodistan</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="icon" href="../images/logo.jpg" type="image/icon type">
+</head>
 <body>
     <div class="mainheader">
         <div><a href="/" id="logo"><h1>Foodistan</h1></a></div>
@@ -379,7 +436,7 @@ input[type=submit]:hover {
 <div><h1 id="head">Submit Your Own Recipe!</h1></div>
 <div class="container">
     <div class="form">
-        <form action="/action_page.php">
+        <!-- <form action="/action_page.php"> -->
         <label for="name">Your Name:</label>
         <input type="text" id="name" name="name" placeholder="Your name..">
         
@@ -637,16 +694,17 @@ input[type=submit]:hover {
             <option value="Zimbabwe">Zimbabwe</option>
         </select>
         
-        <input type="submit" value="Submit" id="submit">
+        <input type="submit" value="submit" id="submit">
         </form>
     </div>
     <div class="upload">
         <input type="file" accept="image/*">
         <svg xmlns="http://www.w3.org/2000/svg" width="384" height="384" viewBox="0 0 24 24">
-            <path fill="currentColor" d="M19.35 10.04A7.49 7.49 0 0 0 12 4C9.11 4 6.6 5.64 5.35 8.04A5.994 5.994 0 0 0 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5c0-2.64-2.05-4.78-4.65-4.96M14 13v4h-4v-4H7l5-5l5 5z" />
+            <path fill="currentColor" d="M5.5 20A5.5 5.5 0 0 1 0 14.5A5.5 5.5 0 0 1 5.5 9c1-2.35 3.3-4 6-4c3.43 0 6.24 2.66 6.5 6.03l.5-.03c2.5 0 4.5 2 4.5 4.5S21 20 18.5 20zm0-10C3 10 1 12 1 14.5S3 19 5.5 19h13a3.5 3.5 0 0 0 3.5-3.5a3.5 3.5 0 0 0-3.5-3.5c-.56 0-1.1.13-1.57.37l.07-.87A5.5 5.5 0 0 0 11.5 6a5.51 5.51 0 0 0-5.31 4.05zm6.5 7v-5.25L14.25 14l.75-.66l-3.5-3.5l-3.5 3.5l.75.66L11 11.75V17z" />
         </svg>
         <p>Drag and Drop Or Click Here<br>to upload your Image!</p>
     </div>
 </div>
+<footer id="footer"><hr><p>Copyright © 2024 HassaanDev. All Rights Reserved</p> </footer>  
 </body>
 </html>
