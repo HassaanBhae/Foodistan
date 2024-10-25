@@ -36,7 +36,7 @@
         width: 90% !important;
     }
     .upload{
-        transform: translateY(300px);
+        transform: translateY(130px);
         width: 90% !important;
     }
     #submit{
@@ -84,9 +84,8 @@ body{
     padding: 0%;
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
+     user-select: none; /* Standard syntax */
 }
-
 #logo{
     display: block;
     text-decoration: none;
@@ -156,8 +155,6 @@ div.mainheader{
     height: 30px;
     width: 30px;
     border-radius: 10%; 
-    /* transition-property:all;
-    transition-duration: 600ms;  */
     right: 140%;
     margin-right: calc(5vw);
 }
@@ -221,31 +218,10 @@ div.mainheader{
     top: 10px;
     display: block;
 }
-    
-#search-bar{
-    width: 90%;
-    position: absolute;
-    left:5%;
-    border-radius: 24px;
-    background-color: #F5F5F8;
-    border-color: #F5F5F8;
-    border-style: none;
-    height: 29px;
-    font-family:  sans-serif;
-    font-weight: 400;
-    text-transform: uppercase;
-    font-size: 12px;
-    padding-left:30px ;
-    outline: none;
-}
 #search-icon{
-    font-size: 170%;
-    position: absolute;
-    z-index: 2;
-    left:5.2%
+    top:10px !important;
+
 }
-
-
 /* MAIN PICCCCCCCC */
 
 body, html {
@@ -257,6 +233,7 @@ input.text,
 input[type="text"],
 input[type="button"],
 input[type="submit"],
+input[type="email"],
 .input-checkbox,
 select {
     -webkit-appearance: none;
@@ -303,7 +280,9 @@ select {
     height: 380px;
     transition-duration: 1s;
 }
-input[type=text], select {
+input[type=email],
+input[type=text], 
+select {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -346,9 +325,10 @@ input[type=submit]:hover {
     border: #000000 dotted 3px;
     border-radius: 2%;
     right: 5%;
+    top: 198px;
     text-align: center;
     justify-content: center;
-    margin-top: 28px;
+    /* margin-top: 28px; */
     transition-duration: 1s;
 }
 .upload input{
@@ -395,15 +375,20 @@ hr{
     background-color: black;
     height:2px;
 }
+input:valid {
+  /* border-color: green; */
+  outline: #45a049 solid ;
+}
 </style>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SUBMIT | Foodistan</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="../searchbar.css">
     <link rel="icon" href="../images/logo.jpg" type="image/icon type">
 </head>
 <body>
+
     <div class="mainheader">
         <div><a href="../index.html" id="logo"><h1>Foodistan</h1></a></div>
         <label id="nav-menu">
@@ -426,28 +411,89 @@ hr{
             <a href="../index.html#for-all-recipe-button">R E C I P E S</a>
             <a href="#top">S U B M I T</a>
         </div>
-
-        <div><svg id="search-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+            <div id="search-bar-and-icon">
+                <svg id="search-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
                 <path fill="currentColor" d="m19.485 20.154l-6.262-6.262q-.75.639-1.725.989t-1.96.35q-2.402 0-4.066-1.663T3.808 9.503T5.47 5.436t4.064-1.667t4.068 1.664T15.268 9.5q0 1.042-.369 2.017t-.97 1.668l6.262 6.261zM9.539 14.23q1.99 0 3.36-1.37t1.37-3.361t-1.37-3.36t-3.36-1.37t-3.361 1.37t-1.37 3.36t1.37 3.36t3.36 1.37" />
-            </svg> 
-            <input id="search-bar" type="search" placeholder="S E A R C H">
+                </svg> 
+            <input id="search-bar" type="text" placeholder="S E A R C H" onkeyup="searchRecipe()">
+            </div>
+            <div id="search-result">
+                <ul>
+                    <li id="burger" class="search-recipe">
+                        <a href="../recipes/burger.html"></a>
+                        <div><img src="../images/burger.jpg"></div>
+                        <h2>Beef Burger</h2>
+                        <span class="tag german">German</span>
+                        <p>High quality beef medium to well with cheese and sauces on a multigrain bun.</p>
+                        <hr>
+                    </li>
+                    <li id="pasta" class="search-recipe">
+                        <a href="../recipes/pasta.html"></a>
+                        <div><img src="../images/pasta.jpg"></div>
+                        <h2>Creamy Steak Pasta</h2>
+                        <span class="tag italian">Italian</span>
+                        <p>Creamy Steak Pasta is made with heavy cream, Parmesan cheese, sun dried tomatoes, pasta, and steak.</p>
+                        <hr>
+                    </li>
+                    <li id="lasgana" class="search-recipe">
+                        <a href="../recipes/lasagna.html"></a>
+                        <div><img src="../images/lasagna.jpeg"></div>
+                        <h2>Neapolitan Lasagna</h2>
+                        <span class="tag mexican">Mexican</span>
+                        <p>It is a dish of Italian origin, made with broad often ruffled noodles and a tomato or white sauce.</p>
+                        <hr>
+                    </li>
+                    <li id="tacos" class="search-recipe">
+                        <div><img src="../images/tacos.jpg"></div>
+                        <a href="../recipes/tacos.html"></a>
+                        <h2>Shrimp Tacos</h2>
+                        <span class="tag mexican">Mexican</span>
+                        <p>Shrimp Tacos are loaded with  juicy shrimp, crisp cabbage, avocado, cotija cheese, cilantro and shrimp taco sauce.</p>
+                        <hr>
+                    </li>
+                    <li id="biryani" class="search-recipe">
+                        <a href="../recipes/biryani.html"></a>
+                        <div><img src="../images/biryani.jpg"></div>
+                        <h2>Chicken Biryani</h2>
+                        <span class="tag desi">Desi</span>
+                        <p>Biryani is a mixed rice dish, mainly popular in South Asia. It is made with rice, chicken and spices.</p>
+                        <hr>
+                    </li>
+                    <li id="pizza" class="search-recipe">
+                        <a href="../recipes/pizza.html"  ></a>
+                        <div><img src="../images/pizza.jpeg"></div>
+                        <h2>New York Pizza</h2>
+                        <span class="tag italian">Italian</span>
+                        <p>New York-style pizza has large slices that are topped with tomato sauce and mozzarella cheese.</p>
+                        <hr>
+                    </li>
+                    <li id="sushi" class="search-recipe">
+                        <a href="../recipes/sushi.html"></a>
+                        <div><img src="../images/salmon.jpg"></div>
+                        <h2>Salmon Sushi</h2>
+                        <span class="tag japanese">Japanese</span>
+                        <p>Type of raw fish for sushi besides tuna, salmon is delicious both raw and lightly seared.</p>
+                        <hr>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 <div><h1 id="head">Submit Your Own Recipe!</h1></div>
 <div class="container">
-    <div class="form">
-        <!-- <form action="/action_page.php"> -->
+    <!-- <div class="form"> -->
+    <form  class="form">
         <label for="name">Your Name:</label>
-        <input type="text" id="name" name="name" placeholder="Your name..">
+        <input type="text" id="name" name="name" placeholder="Your name.." required title="Please Enter Your Full Name.">
         
         <label for="name">Your Email:</label>
-        <input type="text" id="email" name="email" placeholder="Your email..">
+        <input type="email" id="email" name="email" placeholder="Your email.." required title="Please Enter Your Email.">
     
-        <label for="rname">Recipe Name:</label>
-        <input type="text" id="rname" name="recipename" placeholder="Enter the recipe name..">
+        <label for="recipeName">Recipe Name:</label>
+        <input type="text" id="recipeName" name="recipeName" placeholder="Enter the recipe name.." required title="Please Enter The Recipe Name.">
     
         <label for="country">Select Recipe Origin:</label>
-        <select id="country" name="country">
+        <select id="country" name="country" required>
             <option value="Afghanistan">Afghanistan</option>
             <option value="Åland Islands">Åland Islands</option>
             <option value="Albania">Albania</option>
@@ -614,7 +660,7 @@ hr{
             <option value="Northern Mariana Islands">Northern Mariana Islands</option>
             <option value="Norway">Norway</option>
             <option value="Oman">Oman</option>
-            <option value="Pakistan">Pakistan</option>
+            <option value="Pakistan" selected>Pakistan</option>
             <option value="Palau">Palau</option>
             <option value="Palestinian Territory, Occupied">Palestinian Territory, Occupied</option>
             <option value="Panama">Panama</option>
@@ -695,16 +741,17 @@ hr{
         </select>
         
         <input type="submit" value="submit" id="submit">
-        </form>
-    </div>
-    <div class="upload">
-        <input type="file" accept="image/*">
-        <svg xmlns="http://www.w3.org/2000/svg" width="384" height="384" viewBox="0 0 24 24">
-            <path fill="currentColor" d="M5.5 20A5.5 5.5 0 0 1 0 14.5A5.5 5.5 0 0 1 5.5 9c1-2.35 3.3-4 6-4c3.43 0 6.24 2.66 6.5 6.03l.5-.03c2.5 0 4.5 2 4.5 4.5S21 20 18.5 20zm0-10C3 10 1 12 1 14.5S3 19 5.5 19h13a3.5 3.5 0 0 0 3.5-3.5a3.5 3.5 0 0 0-3.5-3.5c-.56 0-1.1.13-1.57.37l.07-.87A5.5 5.5 0 0 0 11.5 6a5.51 5.51 0 0 0-5.31 4.05zm6.5 7v-5.25L14.25 14l.75-.66l-3.5-3.5l-3.5 3.5l.75.66L11 11.75V17z" />
-        </svg>
-        <p>Drag and Drop Or Click Here<br>to upload your Image!</p>
-    </div>
+        <div class="upload">
+            <input type="file" accept="image/*">
+            <svg xmlns="http://www.w3.org/2000/svg" width="384" height="384" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M5.5 20A5.5 5.5 0 0 1 0 14.5A5.5 5.5 0 0 1 5.5 9c1-2.35 3.3-4 6-4c3.43 0 6.24 2.66 6.5 6.03l.5-.03c2.5 0 4.5 2 4.5 4.5S21 20 18.5 20zm0-10C3 10 1 12 1 14.5S3 19 5.5 19h13a3.5 3.5 0 0 0 3.5-3.5a3.5 3.5 0 0 0-3.5-3.5c-.56 0-1.1.13-1.57.37l.07-.87A5.5 5.5 0 0 0 11.5 6a5.51 5.51 0 0 0-5.31 4.05zm6.5 7v-5.25L14.25 14l.75-.66l-3.5-3.5l-3.5 3.5l.75.66L11 11.75V17z" />
+            </svg>
+            <p>Drag and Drop Or Click Here<br>to upload your Image!</p>
+        </div>
+    </form>
+</div>
 </div>
 <footer id="footer"><hr><p>Copyright © 2024 HassaanDev. All Rights Reserved</p> </footer>  
+<script src="../script.js"></script>
 </body>
 </html>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beef Burger | Foodistan</title>
     <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="../searchbar.css">
     <link rel="icon" href="../images/logo.jpg" type="image/icon type">
 </head>
 <body>
@@ -20,7 +21,7 @@
             <div class="dropdown-content">
                 <a href="../index.html">H O M E</a>
                 <a href="../others/blog.html">B L O G</a>
-                <a href="../index.html/#for-all-recipe-button">R E C I P E S</a>
+                <a href="../index.html#for-all-recipe-button">R E C I P E S</a>
                 <a href="../others/submit.html">S U B M I T</a>
             </div>
         </label>
@@ -31,10 +32,73 @@
             <a href="../others/submit.html">S U B M I T</a>
         </div>
 
-        <div><svg id="search-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+        <div>
+            <div id="search-bar-and-icon">
+            <svg id="search-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
                 <path fill="currentColor" d="m19.485 20.154l-6.262-6.262q-.75.639-1.725.989t-1.96.35q-2.402 0-4.066-1.663T3.808 9.503T5.47 5.436t4.064-1.667t4.068 1.664T15.268 9.5q0 1.042-.369 2.017t-.97 1.668l6.262 6.261zM9.539 14.23q1.99 0 3.36-1.37t1.37-3.361t-1.37-3.36t-3.36-1.37t-3.361 1.37t-1.37 3.36t1.37 3.36t3.36 1.37" />
             </svg> 
-            <input id="search-bar" type="search" placeholder="S E A R C H">
+            <input id="search-bar" type="text" placeholder="S E A R C H" onkeyup="searchRecipe()">
+            </div>
+            <div id="search-result">
+                <ul>
+                    <li id="burger" class="search-recipe">
+                        <a href="../recipes/burger.html"></a>
+                        <div><img src="../images/burger.jpg"></div>
+                        <h2>Beef Burger</h2>
+                        <span class="tag german">German</span>
+                        <p>High quality beef medium to well with cheese and sauces on a multigrain bun.</p>
+                        <hr>
+                    </li>
+                    <li id="pasta" class="search-recipe">
+                        <a href="../recipes/pasta.html"></a>
+                        <div><img src="../images/pasta.jpg"></div>
+                        <h2>Creamy Steak Pasta</h2>
+                        <span class="tag italian">Italian</span>
+                        <p>Creamy Steak Pasta is made with heavy cream, Parmesan cheese, sun dried tomatoes, pasta, and steak.</p>
+                        <hr>
+                    </li>
+                    <li id="lasgana" class="search-recipe">
+                        <a href="../recipes/lasagna.html"></a>
+                        <div><img src="../images/lasagna.jpeg"></div>
+                        <h2>Neapolitan Lasagna</h2>
+                        <span class="tag mexican">Mexican</span>
+                        <p>It is a dish of Italian origin, made with broad often ruffled noodles and a tomato or white sauce.</p>
+                        <hr>
+                    </li>
+                    <li id="tacos" class="search-recipe">
+                        <div><img src="../images/tacos.jpg"></div>
+                        <a href="../recipes/tacos.html"></a>
+                        <h2>Shrimp Tacos</h2>
+                        <span class="tag mexican">Mexican</span>
+                        <p>Shrimp Tacos are loaded with  juicy shrimp, crisp cabbage, avocado, cotija cheese, cilantro and shrimp taco sauce.</p>
+                        <hr>
+                    </li>
+                    <li id="biryani" class="search-recipe">
+                        <a href="../recipes/biryani.html"></a>
+                        <div><img src="../images/biryani.jpg"></div>
+                        <h2>Chicken Biryani</h2>
+                        <span class="tag desi">Desi</span>
+                        <p>Biryani is a mixed rice dish, mainly popular in South Asia. It is made with rice, chicken and spices.</p>
+                        <hr>
+                    </li>
+                    <li id="pizza" class="search-recipe">
+                        <a href="../recipes/pizza.html"  ></a>
+                        <div><img src="../images/pizza.jpeg"></div>
+                        <h2>New York Pizza</h2>
+                        <span class="tag italian">Italian</span>
+                        <p>New York-style pizza has large slices that are topped with tomato sauce and mozzarella cheese.</p>
+                        <hr>
+                    </li>
+                    <li id="sushi" class="search-recipe">
+                        <a href="../recipes/sushi.html"></a>
+                        <div><img src="../images/salmon.jpg"></div>
+                        <h2>Salmon Sushi</h2>
+                        <span class="tag japanese">Japanese</span>
+                        <p>Type of raw fish for sushi besides tuna, salmon is delicious both raw and lightly seared.</p>
+                        <hr>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
     <div class="container">
@@ -100,5 +164,6 @@
         </div> 
     </div>
     <footer><hr><p>Copyright © 2024 HassaanDev. All Rights Reserved</p> </footer>  
+    <script src="../script.js"></script>
 </body>
 </html>
