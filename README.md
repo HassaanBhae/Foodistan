@@ -10,6 +10,11 @@ Built while keeping responsive design in mind.
 
 ![Screenshot 2024-09-01 220849](https://github.com/user-attachments/assets/747ec9bb-5ee2-4143-a6ed-75758a892eec)
 
+A Working Search Bar.
+
+![Screenshot 2024-10-27 192242](https://github.com/user-attachments/assets/99442cf4-0dd3-45a9-a238-c9b3a648a921)
+
+
 A working checklist to keep track of your ingredients.
 
 
